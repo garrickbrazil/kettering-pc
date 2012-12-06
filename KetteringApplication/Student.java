@@ -42,6 +42,7 @@ public class Student {
 	/*******************************************************************/
 	public Student(){
 		
+		// Initialize
 		this.username = "";
 		this.password = "";
 		this.clientBanner = new DefaultHttpClient();
@@ -60,6 +61,7 @@ public class Student {
 	/*******************************************************************/
 	public Student(String username, String password){
 		
+		// Initialize
 		this.username = username;
 		this.password = password;
 		this.clientBanner = new DefaultHttpClient();
@@ -117,9 +119,8 @@ public class Student {
 	        entity = response.getEntity();
 	        if (entity != null) EntityUtils.consume(entity);
 	        
-	        
+			
 	        List<Cookie> cookies = this.clientBanner.getCookieStore().getCookies();
-	        
 	        
 	        // Check cookies
 	        for (int i = 0; i < cookies.size(); i++) if (cookies.get(i).getName().equals("SESSID") && !cookies.get(i).getValue().equals("")) sessionSet = true;
@@ -184,6 +185,7 @@ public class Student {
 	/*******************************************************************/
 	public void storeTranscript(){
 		
+		// TODO
 		this.transcript = new Transcript(this.clientBanner);
 	}
 	
@@ -249,17 +251,19 @@ public class Student {
 			System.out.println("Successfully stored grades to \"response2.html\".");
 			
 			
-			Document doc = Jsoup.parse(html);
-			Elements classGrades = doc.getElementsByTag("td");
-			
+			// Class grades
+			Elements classGrades = Jsoup.parse(html).getElementsByTag("td");
 			classGrades.remove(classGrades.size() -1);
 			
 			// Store grades
 			for (int i = 0; i < classGrades.size()/2; i++) {
 				
-				String className = classGrades.get(i*2).text();
+				// Details
 				HttpGet gradeDetail = new HttpGet("https://blackboard.kettering.edu" + classGrades.get(i*2+1).childNode(0).childNode(0).attr("href"));
 				HttpResponse gradeResponse = this.clientBlackboard.execute(gradeDetail);
+				
+				// Parameters
+				String className = classGrades.get(i*2).text();
 				String gradeHTML = HTMLParser.parseResponse(gradeResponse);
 				
 				// Write to file
@@ -268,6 +272,8 @@ public class Student {
 				printer.close();
 				
 				System.out.println("Successfully stored courseGradeDetail" + i + ".html");
+				
+				// Create
 				this.grades.add(new Grade(className, gradeHTML));
 			}
 			

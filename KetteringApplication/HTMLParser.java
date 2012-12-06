@@ -11,15 +11,16 @@ import org.apache.http.HttpResponse;
 /*******************************************************************/
 public class HTMLParser {
 	
-	
+	/********************************************************************
+	* Method: parseInput(InputStream stream)
+	* Purpose: parse inputstream into a string
+	/*******************************************************************/
 	public static String parseInput(InputStream stream) throws IOException{
 	
 		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-
 		
 		String inputLine;
 		String html = "";
-		
 		
 		// Read entire HTML response
 		while ((inputLine = reader.readLine()) != null){ html += inputLine + "\n"; }
@@ -28,15 +29,18 @@ public class HTMLParser {
 
 	}
 	
+	/********************************************************************
+	* Method: parseResponse(HttpResponse response)
+	* Purpose: parse a httpresponse into a string
+	/*******************************************************************/
 	public static String parseResponse(HttpResponse response) throws IOException{
+		
 		
 		InputStream stream = response.getEntity().getContent();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-
 		
 		String inputLine;
 		String html = "";
-		
 		
 		// Read entire HTML response
 		while ((inputLine = reader.readLine()) != null){ html += inputLine + "\n"; }

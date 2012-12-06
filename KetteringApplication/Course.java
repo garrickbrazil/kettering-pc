@@ -12,9 +12,9 @@ public class Course {
 	private String courseName;
 	private String instructor;
 	private String location;
+	private String dateRange;
 	private String time;
 	private String days;
-	private String dateRange;
 	private double credits;
 	private int crn;
 	

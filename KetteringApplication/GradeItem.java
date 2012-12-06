@@ -6,40 +6,61 @@ import org.jsoup.select.Elements;
 /*******************************************************************/
 public class GradeItem {
 
+	// Properties
 	private String gradeName;
 	private boolean validGrade;
 	private double score;
 	private double pointsPossible;
 	
+	
 	/********************************************************************
 	 * Constructor: GradeDetail
 	 * Purpose: create a grade detail object
 	 * Parameters:
-	 * 		Element gradeDetail: the element containing DOM information
+	 * 		Element gradeDetail: contains HTML grade information
 	/*******************************************************************/
 	public GradeItem(Elements gradeDetail){
+
+		// 6 Children?
+		if (gradeDetail.size() >=6){
+			
+			// Set properties
+			this.gradeName = gradeDetail.get(0).text();
+			this.validGrade = true;		
 		
 		
-		this.gradeName = gradeDetail.get(0).text();
-		this.validGrade = true;
-		
-		try {
-			this.score = Double.parseDouble(gradeDetail.get(5).text());
+			// Score
+			try {
+				this.score = Double.parseDouble(gradeDetail.get(5).text());
+			}
+			
+			// Invalid
+			catch(Exception e) {
+				this.score = -1;
+				this.validGrade = false;
+			}
+			
+			
+			// Points Possible
+			try {
+				this.pointsPossible = Double.parseDouble(gradeDetail.get(6).text());
+			}
+			
+			// Invalid
+			catch(Exception e) {
+				this.pointsPossible = -1;
+				this.validGrade = false;
+			}
 		}
 		
-		catch(Exception e) {
+		// Not enough children
+		else {
+			this.validGrade = false;
+			this.gradeName = "error";
 			this.score = -1;
-			this.validGrade = false;
-		}
-		
-		try {
-			this.pointsPossible = Double.parseDouble(gradeDetail.get(6).text());
-		}
-		
-		catch(Exception e) {
 			this.pointsPossible = -1;
-			this.validGrade = false;
 		}
+		
 	}
 	
 	/********************************************************************
