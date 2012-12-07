@@ -215,11 +215,11 @@ public class Student {
 			
 			
 			// Write to file
-			PrintWriter printer = new PrintWriter("response.html");
+			PrintWriter printer = new PrintWriter("HTML Responses/schedule.html");
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored schedule to \"response.html\".");
+			System.out.println("Successfully stored schedule to \"HTML Responses/schedule.html\".");
 			
 		}
 		
@@ -244,11 +244,11 @@ public class Student {
 			String html = HTMLParser.parseResponse(response);
 		    
 			// Write to file
-			PrintWriter printer = new PrintWriter("response2.html");
+			PrintWriter printer = new PrintWriter("HTML Responses/grades.html");
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored grades to \"response2.html\".");
+			System.out.println("Successfully stored grades to \"HTML Responses/grades.html\".");
 			
 			
 			// Class grades
@@ -267,11 +267,11 @@ public class Student {
 				String gradeHTML = HTMLParser.parseResponse(gradeResponse);
 				
 				// Write to file
-				printer = new PrintWriter("courseGradeDetail" + i + ".html");
+				printer = new PrintWriter("HTML Responses/courseGradeDetail" + i + ".html");
 				printer.print(gradeHTML);	    	
 				printer.close();
 				
-				System.out.println("Successfully stored courseGradeDetail" + i + ".html");
+				System.out.println("Successfully stored \"HTML Responses/courseGradeDetail" + i + ".html\"");
 				
 				// Create
 				this.grades.add(new Grade(className, gradeHTML));
