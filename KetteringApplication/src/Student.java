@@ -18,8 +18,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 
-
-
 /********************************************************************
  * Class: Student
  * Purpose: Hold all student data and connections
@@ -29,9 +27,9 @@ public class Student {
 	// Properties
 	private String username;
 	private String password;
+	private String transcript;
 	private DefaultHttpClient clientBanner;
 	private DefaultHttpClient clientBlackboard;
-	private Transcript transcript;
 	private List<Course> courses;
 	private List<Grade> grades;
 	
@@ -79,7 +77,7 @@ public class Student {
 	public String getPassword(){ return this.password; }
 	public List<Course> getCourses(){ return this.courses; }
 	public List<Grade> getGrades(){ return this.grades; }
-	public Transcript getTranscript() { return this.transcript; }
+	public String getTranscript() { return this.transcript; }
 	
 	
 	
@@ -136,6 +134,7 @@ public class Student {
 		catch(Exception e){ e.printStackTrace(); }
 	}
 	
+	
 	/********************************************************************
 	 * Method: loginBlackboard()
 	 * Purpose: logs user into blackboard
@@ -179,15 +178,35 @@ public class Student {
 	}
 	
 	
+	
 	/********************************************************************
 	 * Method: storeTranscript()
 	 * Purpose: stores transcript to memory
 	/*******************************************************************/
 	public void storeTranscript(){
 		
-		// TODO
-		this.transcript = new Transcript(this.clientBanner);
+		try{
+			
+			// Connect
+			HttpGet transcript = new HttpGet("https://jweb.kettering.edu/cku1/ku_web_trans.view_transcript?tprt=SHRTRTC&levl=U");
+			HttpResponse response = this.clientBanner.execute(transcript);
+			
+			String html = HTMLParser.parse(response);
+			
+			// Write to file
+			PrintWriter printer = new PrintWriter("HTML Responses/transcript.html");
+			printer.print(html);	    	
+			printer.close();
+			
+			System.out.println("Successfully stored transcript to \"HTML Responses/transcript.html\".");
+			
+			
+			this.transcript = html;
+		}
+		
+		catch(Exception e){ e.printStackTrace(); }
 	}
+	
 	
 	
 	/********************************************************************
@@ -204,7 +223,7 @@ public class Student {
 		    
 			// Execute
 			HttpResponse response = this.clientBanner.execute(schedule);
-			String html = HTMLParser.parseResponse(response);
+			String html = HTMLParser.parse(response);
 		    
 			Document doc = Jsoup.parse(html);
 			Elements classSchedules = doc.getElementsByClass("datadisplaytable");
@@ -241,7 +260,7 @@ public class Student {
 			
 			// Execute
 		    HttpResponse response = this.clientBlackboard.execute(grade);
-			String html = HTMLParser.parseResponse(response);
+			String html = HTMLParser.parse(response);
 		    
 			// Write to file
 			PrintWriter printer = new PrintWriter("HTML Responses/grades.html");
@@ -264,7 +283,7 @@ public class Student {
 				
 				// Parameters
 				String className = classGrades.get(i*2).text();
-				String gradeHTML = HTMLParser.parseResponse(gradeResponse);
+				String gradeHTML = HTMLParser.parse(gradeResponse);
 				
 				// Write to file
 				printer = new PrintWriter("HTML Responses/courseGradeDetail" + i + ".html");

@@ -71,30 +71,28 @@ public class Grade {
 	
 	/********************************************************************
 	 * Method: toString
-	 * Purpose: format a nice string to print off the grade
-	 * Returns:
-	 *		String gradeStr: formatted string containing all grade info
+	 * Purpose: format object into a string
 	/*******************************************************************/
 	public String toString(){
 		String gradeStr = "";
 				
 		if(this.validCourseGrade){
 			
-			gradeStr = this.courseName + "\n";
+			gradeStr = "[" + this.courseName + "]\n";
 			
 			for(int j = 0; j < this.gradeItems.size(); j++){
 				GradeItem currentDetail = this.gradeItems.get(j);
 				if (currentDetail.getValidGrade()){
-					gradeStr += "\n\t" + currentDetail.getGradeName();
+					gradeStr += "\n" + currentDetail.getGradeName();
 					gradeStr += " Score: " + currentDetail.getScore();
 					gradeStr += " Possible: " + currentDetail.getPointsPossible();
 					gradeStr += " Percentage: " + Math.round(currentDetail.getScore()/currentDetail.getPointsPossible()*100) + "%";
 				}	
 			}
 			
-			gradeStr += "\n\tAdjusted Total: " + this.adjTotal + "\n";
-			gradeStr += "\tPoints Possible: " + this.adjPointsPossible + "\n";
-			gradeStr += "\tPercentage: " + Math.round(this.adjTotal/this.adjPointsPossible * 100) + "%\n";
+			gradeStr += "\n\nAdjusted Total: " + this.adjTotal + "\n";
+			gradeStr += "Adjusted Points Possible: " + this.adjPointsPossible + "\n";
+			gradeStr += "Percentage: " + Math.round(this.adjTotal/this.adjPointsPossible * 100) + "%\n";
 		}
 
 		return gradeStr;

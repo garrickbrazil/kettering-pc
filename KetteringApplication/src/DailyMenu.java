@@ -3,7 +3,8 @@
  * Purpose: holds a single days menu
 /*******************************************************************/
 public class DailyMenu {
-
+	
+	// Properties
 	private Food lunch;
 	private Food dinner;
 	
@@ -12,6 +13,8 @@ public class DailyMenu {
 	 * Purpose: creates a default daily menu
 	/*******************************************************************/
 	public DailyMenu(){
+		
+		// Cook
 		this.lunch = new Food();
 		this.dinner = new Food();
 	}

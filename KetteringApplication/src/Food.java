@@ -3,7 +3,8 @@
  * Purpose: holds food items
 /*******************************************************************/
 public class Food {
-
+	
+	// Properties
 	private String soup;
 	private String pastaStation;
 	private String grill;
@@ -19,6 +20,7 @@ public class Food {
 	/*******************************************************************/
 	public Food(){
 		
+		// Default
 		this.soup = "";
 		this.pastaStation = "";
 		this.grill = "";
@@ -41,6 +43,7 @@ public class Food {
 	public String getExpo() { return this.expo; }
 	public String getDessert() { return this.dessert; }
 	
+	
 	/********************************************************************
 	 * Mutuators: setSoup, setPastaStation, setGrill, setPizza, setDeli,
 	 * 		setExpo, setDessert
@@ -54,5 +57,24 @@ public class Food {
 	public void setExpo(String expo) { this.expo = expo; }
 	public void setDessert(String dessert) { this.dessert = dessert; }
 	
+	
+	/********************************************************************
+	 * Method: toString
+	 * Purpose: format object into a string
+	/*******************************************************************/
+	public String toString(){
+		
+		String foodStr = "";
+		
+		if(!this.soup.equals("\u00A0")) foodStr += "Soup: " + this.soup + " ";
+		if(!this.pastaStation.equals("\u00A0")) foodStr += "Pasta Station: " + this.pastaStation + " ";
+		if(!this.grill.equals("\u00A0")) foodStr += "Grill: " + this.grill + " ";
+		if(!this.pizza.equals("\u00A0")) foodStr += "Pizza: " + this.pizza + " ";
+		if(!this.deli.equals("\u00A0")) foodStr += "Deli: " + this.deli + " ";
+		if(!this.expo.equals("\u00A0")) foodStr += "Expo: " + this.expo + " ";
+		if(!this.dessert.equals("\u00A0")) foodStr += "Dessert: " + this.dessert + " ";
+		
+		return foodStr;
+	}
 	
 }
