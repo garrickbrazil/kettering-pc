@@ -57,12 +57,12 @@ public class MainApp {
 		System.out.println("\n\n========== Storing ==========\n");
 		Menu menu = new Menu();
 		user.storeSchedule(201301);
-		user.storeGrades();
+		user.storeCurrentGrades();
 		user.storeTranscript();
 		
 		
 		System.out.println("\n\n========== Grades Print==========\n");
-		for(int i = 0; i < user.getGrades().size(); i++) if(user.getGrades().get(i).getValidCourseGrade()) System.out.println("\n" + user.getGrades().get(i).toString());
+		for(int i = 0; i < user.getCurrentGrades().size(); i++) if(user.getCurrentGrades().get(i).getValidCourseGrade()) System.out.println("\n" + user.getCurrentGrades().get(i).toString());
 		
 		
 		

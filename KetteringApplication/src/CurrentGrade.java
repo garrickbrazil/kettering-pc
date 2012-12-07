@@ -7,31 +7,31 @@ import org.jsoup.select.Elements;
 
 
 /********************************************************************
- * Class: Grade
+ * Class: CurrentGrade
  * Purpose: stores grades for a single class
 /*******************************************************************/
-public class Grade {
+public class CurrentGrade {
 	
 	// Properties
 	private String courseName;
-	private List<GradeItem> gradeItems;
+	private List<CurrentGradeItem> gradeItems;
 	private boolean validCourseGrade;
 	private double adjPointsPossible;
 	private double adjTotal;
 	
 	
 	/********************************************************************
-	 * Constructor: Grade()
+	 * Constructor: CurrentGrade()
 	 * Purpose: create a grade object
 	 * Parameters:
 	 *		String courseName: name of the course
 	 *		String details: HTML details of course grade items
 	/*******************************************************************/
-	public Grade(String courseName, String details){
+	public CurrentGrade(String courseName, String details){
 		
 		// Initialize properties
 		this.courseName = courseName;
-		this.gradeItems = new ArrayList<GradeItem>();
+		this.gradeItems = new ArrayList<CurrentGradeItem>();
 		this.validCourseGrade = false;
 		this.adjPointsPossible = 0;
 		this.adjTotal = 0;
@@ -52,8 +52,8 @@ public class Grade {
 			for (int i = 0; i < gradeElements.size(); i++){
 				
 				// Create
-				this.gradeItems.add(new GradeItem(gradeElements.get(i).children()));
-				GradeItem current = this.gradeItems.get(i);
+				this.gradeItems.add(new CurrentGradeItem(gradeElements.get(i).children()));
+				CurrentGradeItem current = this.gradeItems.get(i);
 				
 				// Adjusted total & points possible
 				if (current.getValidGrade() && !(current.getGradeName().equalsIgnoreCase("Total")|| current.getGradeName().equalsIgnoreCase("Weighted Total"))) { 
@@ -81,7 +81,7 @@ public class Grade {
 			gradeStr = "[" + this.courseName + "]\n";
 			
 			for(int j = 0; j < this.gradeItems.size(); j++){
-				GradeItem currentDetail = this.gradeItems.get(j);
+				CurrentGradeItem currentDetail = this.gradeItems.get(j);
 				if (currentDetail.getValidGrade()){
 					gradeStr += "\n" + currentDetail.getGradeName();
 					gradeStr += " Score: " + currentDetail.getScore();
@@ -106,6 +106,6 @@ public class Grade {
 	public String getCourseName() { return this.courseName; }
 	public boolean getValidCourseGrade() { return this.validCourseGrade; }
 	public double getAdjTotal() { return this.adjTotal; }
-	public List<GradeItem> getGradeItems() { return this.gradeItems; }
+	public List<CurrentGradeItem> getGradeItems() { return this.gradeItems; }
 	public double getAdjPointsPossible() { return this.adjPointsPossible; }
 }

@@ -1,10 +1,10 @@
 import org.jsoup.select.Elements;
 
 /********************************************************************
- * Class: GradeDetail
+ * Class: CurrentGradeDetail
  * Purpose: stores 1 detailed grade
 /*******************************************************************/
-public class GradeItem {
+public class CurrentGradeItem {
 
 	// Properties
 	private String gradeName;
@@ -14,12 +14,12 @@ public class GradeItem {
 	
 	
 	/********************************************************************
-	 * Constructor: GradeDetail
+	 * Constructor: CurrentGradeDetail
 	 * Purpose: create a grade detail object
 	 * Parameters:
 	 * 		Element gradeDetail: contains HTML grade information
 	/*******************************************************************/
-	public GradeItem(Elements gradeDetail){
+	public CurrentGradeItem(Elements gradeDetail){
 
 		// 6 Children?
 		if (gradeDetail.size() >=6){

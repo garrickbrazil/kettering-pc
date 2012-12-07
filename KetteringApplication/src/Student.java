@@ -31,7 +31,7 @@ public class Student {
 	private DefaultHttpClient clientBanner;
 	private DefaultHttpClient clientBlackboard;
 	private List<Course> courses;
-	private List<Grade> grades;
+	private List<CurrentGrade> currentGrades;
 	
 	
 	/********************************************************************
@@ -46,7 +46,7 @@ public class Student {
 		this.clientBanner = new DefaultHttpClient();
 		this.clientBlackboard = new DefaultHttpClient();
 		this.courses = new ArrayList<Course>();
-		this.grades = new ArrayList<Grade>();
+		this.currentGrades = new ArrayList<CurrentGrade>();
 	}
 	
 	
@@ -65,18 +65,19 @@ public class Student {
 		this.clientBanner = new DefaultHttpClient();
 		this.clientBlackboard = new DefaultHttpClient();
 		this.courses = new ArrayList<Course>();
-		this.grades = new ArrayList<Grade>();
+		this.currentGrades = new ArrayList<CurrentGrade>();
 	}
 	
 	
 	/********************************************************************
-	 * Accessors: getUsername(), getPassword()
+	 * Accessors: getUsername, getPassword, getCourses, getCurrentGrades
+	 * 		getTranscript
 	 * Purpose: get the corresponding data
 	/*******************************************************************/
 	public String getUsername() { return this.username; }
 	public String getPassword(){ return this.password; }
 	public List<Course> getCourses(){ return this.courses; }
-	public List<Grade> getGrades(){ return this.grades; }
+	public List<CurrentGrade> getCurrentGrades(){ return this.currentGrades; }
 	public String getTranscript() { return this.transcript; }
 	
 	
@@ -249,10 +250,10 @@ public class Student {
 	
 	
 	/********************************************************************
-	 * Method: storeGrades()
+	 * Method: storeCurrentGrades()
 	 * Purpose: stores grades to memory
 	/*******************************************************************/
-	public void storeGrades(){
+	public void storeCurrentGrades(){
 		
 		try{
 			
@@ -293,7 +294,7 @@ public class Student {
 				System.out.println("Successfully stored \"HTML Responses/courseGradeDetail" + i + ".html\"");
 				
 				// Create
-				this.grades.add(new Grade(className, gradeHTML));
+				this.currentGrades.add(new CurrentGrade(className, gradeHTML));
 			}
 			
 		}
