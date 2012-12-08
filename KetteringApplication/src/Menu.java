@@ -48,11 +48,11 @@ public class Menu {
 		
 		
 		// Write to file
-		PrintWriter printer = new PrintWriter("HTML Responses/menu.html");
+		PrintWriter printer = new PrintWriter("artifacts/menu.html");
 		printer.print(html);	    	
 		printer.close();
 		
-		System.out.println("Successfully stored menu to \"HTML Responses/menu.html\".");
+		System.out.println("Successfully stored menu to \"artifacts/menu.html\".");
 		
 		
 		Elements tables = Jsoup.parse(html).getElementsByTag("table");

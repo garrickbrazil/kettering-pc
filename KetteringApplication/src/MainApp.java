@@ -57,18 +57,22 @@ public class MainApp {
 		System.out.println("\n\n========== Storing ==========\n");
 		Menu menu = new Menu();
 		user.storeSchedule(201301);
+		user.storeFinalGrades(201201);
 		user.storeCurrentGrades();
 		user.storeTranscript();
+
+		
+		System.out.println("\n\n========== Menu Print ==========\n");
+		System.out.println(menu.toString());
 		
 		
 		System.out.println("\n\n========== Grades Print==========\n");
 		for(int i = 0; i < user.getCurrentGrades().size(); i++) if(user.getCurrentGrades().get(i).getValidCourseGrade()) System.out.println("\n" + user.getCurrentGrades().get(i).toString());
 		
 		
-		
-		System.out.println("\n\n========== Menu Print ==========\n");
-		System.out.println(menu.toString());
-		
+		System.out.println("\n\n========== Final Grades ==========\n");
+		for(int i = 0; i < user.getFinalGrades().size(); i++) System.out.println(user.getFinalGrades().get(i).toString());
+		System.out.println("\n" + user.getUndergradSummary().toString());
 		
 		input.close();
 		

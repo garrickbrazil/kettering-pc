@@ -32,6 +32,8 @@ public class Student {
 	private DefaultHttpClient clientBlackboard;
 	private List<Course> courses;
 	private List<CurrentGrade> currentGrades;
+	private List<FinalGrade> finalGrades;
+	private UndergradSummary undergradSummary;
 	
 	
 	/********************************************************************
@@ -47,6 +49,7 @@ public class Student {
 		this.clientBlackboard = new DefaultHttpClient();
 		this.courses = new ArrayList<Course>();
 		this.currentGrades = new ArrayList<CurrentGrade>();
+		this.finalGrades = new ArrayList<FinalGrade>();
 	}
 	
 	
@@ -66,6 +69,7 @@ public class Student {
 		this.clientBlackboard = new DefaultHttpClient();
 		this.courses = new ArrayList<Course>();
 		this.currentGrades = new ArrayList<CurrentGrade>();
+		this.finalGrades = new ArrayList<FinalGrade>();
 	}
 	
 	
@@ -79,6 +83,8 @@ public class Student {
 	public List<Course> getCourses(){ return this.courses; }
 	public List<CurrentGrade> getCurrentGrades(){ return this.currentGrades; }
 	public String getTranscript() { return this.transcript; }
+	public List<FinalGrade> getFinalGrades(){ return this.finalGrades; }
+	public UndergradSummary getUndergradSummary(){ return this.undergradSummary; }
 	
 	
 	
@@ -195,11 +201,11 @@ public class Student {
 			String html = HTMLParser.parse(response);
 			
 			// Write to file
-			PrintWriter printer = new PrintWriter("HTML Responses/transcript.html");
+			PrintWriter printer = new PrintWriter("artifacts/transcript.html");
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored transcript to \"HTML Responses/transcript.html\".");
+			System.out.println("Successfully stored transcript to \"artifacts/transcript.html\".");
 			
 			
 			this.transcript = html;
@@ -235,17 +241,16 @@ public class Student {
 			
 			
 			// Write to file
-			PrintWriter printer = new PrintWriter("HTML Responses/schedule.html");
+			PrintWriter printer = new PrintWriter("artifacts/schedule.html");
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored schedule to \"HTML Responses/schedule.html\".");
+			System.out.println("Successfully stored schedule to \"artifacts/schedule.html\".");
 			
 		}
 		
 		catch(Exception e){ e.printStackTrace(); }
 	}
-	
 	
 	
 	
@@ -264,11 +269,11 @@ public class Student {
 			String html = HTMLParser.parse(response);
 		    
 			// Write to file
-			PrintWriter printer = new PrintWriter("HTML Responses/grades.html");
+			PrintWriter printer = new PrintWriter("artifacts/grades.html");
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored grades to \"HTML Responses/grades.html\".");
+			System.out.println("Successfully stored grades to \"artifacts/grades.html\".");
 			
 			
 			// Class grades
@@ -287,11 +292,11 @@ public class Student {
 				String gradeHTML = HTMLParser.parse(gradeResponse);
 				
 				// Write to file
-				printer = new PrintWriter("HTML Responses/courseGradeDetail" + i + ".html");
+				printer = new PrintWriter("artifacts/courseGradeDetail" + i + ".html");
 				printer.print(gradeHTML);	    	
 				printer.close();
 				
-				System.out.println("Successfully stored \"HTML Responses/courseGradeDetail" + i + ".html\"");
+				System.out.println("Successfully stored \"artifacts/courseGradeDetail" + i + ".html\"");
 				
 				// Create
 				this.currentGrades.add(new CurrentGrade(className, gradeHTML));
@@ -302,4 +307,50 @@ public class Student {
 		catch(Exception e){ e.printStackTrace(); }
 	}
 
+	
+	
+	/********************************************************************
+	 * Method: storeFinalGrades()
+	 * Purpose: store final grades to memory
+	/*******************************************************************/
+	public void storeFinalGrades(int term){
+		
+		try {
+			
+			HttpGet finalGet = new HttpGet("https://jweb.kettering.edu/cku1/wbwskogrd.P_ViewGrde?term_in=" + term + "&inam=on&snam=on&sgid=on");
+			HttpResponse response = this.clientBanner.execute(finalGet);
+			
+			String html = HTMLParser.parse(response);
+			
+			// Write to file
+			PrintWriter printer = new PrintWriter("artifacts/finalgrades.html");
+			printer.print(html);	    	
+			printer.close();
+			
+			System.out.println("Successfully stored final grades to \"artifacts/finalgrades.html\"");
+			
+			
+			Elements tables = Jsoup.parse(html).getElementsByClass("datadisplaytable");
+			
+			if (tables.size() >= 3 && tables.get(2).getElementsByTag("tbody").size() > 0 && tables.get(1).getElementsByTag("tbody").size() > 0){
+				
+				this.undergradSummary = new UndergradSummary(tables.get(2).getElementsByTag("tbody").get(0).getElementsByTag("tr"));
+				Elements courses = tables.get(1).getElementsByTag("tbody").get(0).getElementsByTag("tr");
+				courses.remove(0);
+				
+				for(int i = 0; i < courses.size();  i++){
+					this.finalGrades.add(new FinalGrade(courses.get(i).getElementsByTag("td")));
+					
+				}
+				
+			}
+			
+			
+		}
+		
+		catch(Exception e){ e.printStackTrace(); }
+		
+	
+	}
 }
+

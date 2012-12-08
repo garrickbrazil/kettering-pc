@@ -1,3 +1,5 @@
+import org.jsoup.select.Elements;
+
 /********************************************************************
  * Class: UndergradSummary
  * Purpose: information obtained from final grades (GPA, credits, etc)
@@ -28,8 +30,25 @@ public class UndergradSummary {
 	 * Constructor: UndergradSummary
 	 * Purpose: create undergrad summary object with parameters
 	/*******************************************************************/
-	public UndergradSummary(String TODO){
+	public UndergradSummary(Elements elements){
 		
+		if (elements.size() == 5){
+			
+			elements.remove(0);
+			Elements currentTerm = elements.get(0).getElementsByTag("td");
+			Elements cumulative = elements.get(1).getElementsByTag("td");
+			Elements transfer = elements.get(2).getElementsByTag("td");
+			Elements overall = elements.get(3).getElementsByTag("td");
+			
+			if (currentTerm.size() == 5 && cumulative.size() == 5 && transfer.size() == 5 && overall.size() == 5){
+				
+				this.currentTerm = new UndergradSummaryDetail(Double.parseDouble(currentTerm.get(0).text()), Double.parseDouble(currentTerm.get(1).text()), Double.parseDouble(currentTerm.get(2).text()), Double.parseDouble(currentTerm.get(3).text()), Double.parseDouble(currentTerm.get(4).text()));
+				this.cumulative = new UndergradSummaryDetail(Double.parseDouble(cumulative.get(0).text()), Double.parseDouble(cumulative.get(1).text()), Double.parseDouble(cumulative.get(2).text()), Double.parseDouble(cumulative.get(3).text()), Double.parseDouble(cumulative.get(4).text()));
+				this.transfer = new UndergradSummaryDetail(Double.parseDouble(transfer.get(0).text()), Double.parseDouble(transfer.get(1).text()), Double.parseDouble(transfer.get(2).text()), Double.parseDouble(transfer.get(3).text()), Double.parseDouble(transfer.get(4).text()));
+				this.overall = new UndergradSummaryDetail(Double.parseDouble(overall.get(0).text()), Double.parseDouble(overall.get(1).text()), Double.parseDouble(overall.get(2).text()), Double.parseDouble(overall.get(3).text()), Double.parseDouble(overall.get(4).text()));
+			}
+			
+		}
 		
 	}
 	
@@ -42,6 +61,12 @@ public class UndergradSummary {
 	public UndergradSummaryDetail getCumulative(){ return this.cumulative; }
 	public UndergradSummaryDetail getTransfer(){ return this.transfer; }
 	public UndergradSummaryDetail getOverall(){ return this.overall; }
+	
+	
+	public String toString(){
+		
+		return "Current term: " + this.currentTerm.toString() + "\nCumulative: " + this.cumulative.toString() + "\nTransfer: " + this.transfer.toString() + "\nOverall: " + this.overall.toString();
+	}
 	
 	
 }
@@ -110,5 +135,12 @@ class UndergradSummaryDetail{
 	public void setGPAHours(double GPAHours){ this.GPAHours = GPAHours; }
 	public void setQualityPoints(double qualityPoints){ this.qualityPoints = qualityPoints; }
 	public void setGPA(double GPA){ this.GPA = GPA; }
+	
+	
+	public String toString(){
+		
+		return "Attempted: " + this.attempted + " Earned: " + this.earned + " GPA Hours " + this.GPAHours + " Quality Points: " + this.qualityPoints + " GPA: " + this.GPA;
+	}
+	
 	
 }

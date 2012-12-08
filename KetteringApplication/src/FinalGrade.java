@@ -1,3 +1,5 @@
+import org.jsoup.select.Elements;
+
 /********************************************************************
  * Class: FinalGrade
  * Purpose: holds a single final grade and all its properties
@@ -39,12 +41,45 @@ public class FinalGrade {
 	}
 	
 	/********************************************************************
-	 * Constructor: UndergradSummary
+	 * Constructor: FinalGrade
 	 * Purpose: create a final grade object with parameters
 	/*******************************************************************/
-	public FinalGrade(String todo){
+	public FinalGrade(Elements details){
+		
+		if(details.size() == 12){
+			
+			this.crn = Integer.parseInt(details.get(0).text());
+			this.subject = details.get(1).text();
+			this.courseID = Integer.parseInt(details.get(2).text());
+			this.section = Integer.parseInt(details.get(3).text());
+			this.title = details.get(4).text();
+			this.campus = details.get(5).text();
+			this.grade = details.get(6).text();
+			this.attemptedCredits = Double.parseDouble(details.get(7).text());
+			this.earnedCredits = Double.parseDouble(details.get(8).text());
+			this.GPAHours = Double.parseDouble(details.get(9).text());
+			this.qualityPoints = Double.parseDouble(details.get(10).text());
+		}
+		
+		else{
+
+			// Initialize
+			this.crn = 0;
+			this.subject = "";
+			this.courseID = 0;
+			this.section = 0;
+			this.title = "";
+			this.campus = "";
+			this.grade = "";
+			this.attemptedCredits = 0;
+			this.earnedCredits = 0;
+			this.GPAHours = 0;
+			this.qualityPoints = 0;
+		}
 		
 	}
+	
+	
 	
 	/********************************************************************
 	 * Accessors: getCrn, getSubject, getCourseId, getSection, getTitle, 
@@ -64,4 +99,10 @@ public class FinalGrade {
 	public double getGPAHours(){ return this.GPAHours; }
 	public double getQualityPoints(){ return this.qualityPoints; }
 
+	
+	
+	public String toString(){
+		
+		return "CRN: " + this.crn +  " CourseID: " + this.courseID + " Section: " + this.section + " Earned credits: " + this.earnedCredits  + " Grade: " + this.grade + " Subject: " + this.subject + " Title: " + this.title;  
+	}
 }
