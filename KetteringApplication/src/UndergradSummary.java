@@ -35,13 +35,17 @@ public class UndergradSummary {
 		if (elements.size() == 5){
 			
 			elements.remove(0);
+			
+			// Get elements
 			Elements currentTerm = elements.get(0).getElementsByTag("td");
 			Elements cumulative = elements.get(1).getElementsByTag("td");
 			Elements transfer = elements.get(2).getElementsByTag("td");
 			Elements overall = elements.get(3).getElementsByTag("td");
 			
+			// Correct size ?
 			if (currentTerm.size() == 5 && cumulative.size() == 5 && transfer.size() == 5 && overall.size() == 5){
 				
+				// Set properties
 				this.currentTerm = new UndergradSummaryDetail(Double.parseDouble(currentTerm.get(0).text()), Double.parseDouble(currentTerm.get(1).text()), Double.parseDouble(currentTerm.get(2).text()), Double.parseDouble(currentTerm.get(3).text()), Double.parseDouble(currentTerm.get(4).text()));
 				this.cumulative = new UndergradSummaryDetail(Double.parseDouble(cumulative.get(0).text()), Double.parseDouble(cumulative.get(1).text()), Double.parseDouble(cumulative.get(2).text()), Double.parseDouble(cumulative.get(3).text()), Double.parseDouble(cumulative.get(4).text()));
 				this.transfer = new UndergradSummaryDetail(Double.parseDouble(transfer.get(0).text()), Double.parseDouble(transfer.get(1).text()), Double.parseDouble(transfer.get(2).text()), Double.parseDouble(transfer.get(3).text()), Double.parseDouble(transfer.get(4).text()));
@@ -63,11 +67,15 @@ public class UndergradSummary {
 	public UndergradSummaryDetail getOverall(){ return this.overall; }
 	
 	
+	
+	/********************************************************************
+	 * Method: toString
+	 * Purpose: format object into a string
+	/*******************************************************************/
 	public String toString(){
 		
 		return "Current term: " + this.currentTerm.toString() + "\nCumulative: " + this.cumulative.toString() + "\nTransfer: " + this.transfer.toString() + "\nOverall: " + this.overall.toString();
 	}
-	
 	
 }
 
@@ -115,6 +123,7 @@ class UndergradSummaryDetail{
 		this.GPA = GPA;
 	}
 	
+	
 	/********************************************************************
 	 * Accessors: getAttempted, getEarned, getGPAHours, getQualityPoints, getGPA
 	 * Purpose: get the corresponding data
@@ -124,6 +133,7 @@ class UndergradSummaryDetail{
 	public double getGPAHours(){ return this.GPAHours; }
 	public double getQualityPoints(){ return this.qualityPoints; }
 	public double getGPA(){ return this.GPA; }
+	
 	
 	
 	/********************************************************************
@@ -137,6 +147,10 @@ class UndergradSummaryDetail{
 	public void setGPA(double GPA){ this.GPA = GPA; }
 	
 	
+	/********************************************************************
+	 * Method: toString
+	 * Purpose: format object into a string
+	/*******************************************************************/
 	public String toString(){
 		
 		return "Attempted: " + this.attempted + " Earned: " + this.earned + " GPA Hours " + this.GPAHours + " Quality Points: " + this.qualityPoints + " GPA: " + this.GPA;

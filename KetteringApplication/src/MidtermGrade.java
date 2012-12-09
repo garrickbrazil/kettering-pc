@@ -1,10 +1,10 @@
 import org.jsoup.select.Elements;
 
 /********************************************************************
- * Class: FinalGrade
- * Purpose: holds a single final grade and all its properties
+ * Class: MidtermGrade
+ * Purpose: holds a single midterm grade and all its properties
 /*******************************************************************/
-public class FinalGrade {
+public class MidtermGrade {
 	
 	// Properties
 	private int crn;
@@ -15,17 +15,15 @@ public class FinalGrade {
 	private String campus;
 	private String grade;
 	private double attemptedCredits;
-	private double earnedCredits;
-	private double GPAHours;
-	private double qualityPoints;
+	
 	
 	/********************************************************************
-	 * Constructor: FinalGrade
-	 * Purpose: create a default final grade object
+	 * Constructor: MidtermGrade
+	 * Purpose: create a default midterm grade object
 	/*******************************************************************/
-	public FinalGrade(){
+	public MidtermGrade(){
 		
-		// Defaults
+		// Initialize
 		this.crn = 0;
 		this.subject = "";
 		this.courseID = 0;
@@ -34,21 +32,17 @@ public class FinalGrade {
 		this.campus = "";
 		this.grade = "";
 		this.attemptedCredits = 0;
-		this.earnedCredits = 0;
-		this.GPAHours = 0;
-		this.qualityPoints = 0;
-		
 	}
 	
 	/********************************************************************
-	 * Constructor: FinalGrade
-	 * Purpose: create a final grade object with parameters
+	 * Constructor: MidtermGrade
+	 * Purpose: create a midterm grade object with parameters
 	/*******************************************************************/
-	public FinalGrade(Elements details){
+	public MidtermGrade(Elements details){
 		
-		if(details.size() == 12){
+		if(details.size() >= 8){
 			
-			// Properties
+			// Set properties
 			this.crn = Integer.parseInt(details.get(0).text());
 			this.subject = details.get(1).text();
 			this.courseID = Integer.parseInt(details.get(2).text());
@@ -57,9 +51,6 @@ public class FinalGrade {
 			this.campus = details.get(5).text();
 			this.grade = details.get(6).text();
 			this.attemptedCredits = Double.parseDouble(details.get(7).text());
-			this.earnedCredits = Double.parseDouble(details.get(8).text());
-			this.GPAHours = Double.parseDouble(details.get(9).text());
-			this.qualityPoints = Double.parseDouble(details.get(10).text());
 		}
 		
 		else{
@@ -73,13 +64,9 @@ public class FinalGrade {
 			this.campus = "";
 			this.grade = "";
 			this.attemptedCredits = 0;
-			this.earnedCredits = 0;
-			this.GPAHours = 0;
-			this.qualityPoints = 0;
 		}
 		
 	}
-	
 	
 	
 	/********************************************************************
@@ -96,10 +83,8 @@ public class FinalGrade {
 	public String getCampus(){ return this.campus; }
 	public String getGrade(){ return this.grade; }
 	public double getAttemptedCredits(){ return this.attemptedCredits; }
-	public double getEarnedCredits(){ return this.earnedCredits; }
-	public double getGPAHours(){ return this.GPAHours; }
-	public double getQualityPoints(){ return this.qualityPoints; }
 
+	
 	
 	/********************************************************************
 	 * Method: toString
@@ -107,6 +92,6 @@ public class FinalGrade {
 	/*******************************************************************/
 	public String toString(){
 		
-		return "CRN: " + this.crn +  " CourseID: " + this.courseID + " Section: " + this.section + " Earned credits: " + this.earnedCredits  + " Grade: " + this.grade + " Subject: " + this.subject + " Title: " + this.title;  
+		return "CRN: " + this.crn +  " CourseID: " + this.courseID + " Section: " + this.section + " Grade: " + this.grade + " Subject: " + this.subject + " Title: " + this.title;  
 	}
 }

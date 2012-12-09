@@ -33,7 +33,9 @@ public class Student {
 	private List<Course> courses;
 	private List<CurrentGrade> currentGrades;
 	private List<FinalGrade> finalGrades;
+	private List<MidtermGrade> midtermGrades;
 	private UndergradSummary undergradSummary;
+	private AccountTotal accountTotal;
 	
 	
 	/********************************************************************
@@ -50,6 +52,7 @@ public class Student {
 		this.courses = new ArrayList<Course>();
 		this.currentGrades = new ArrayList<CurrentGrade>();
 		this.finalGrades = new ArrayList<FinalGrade>();
+		this.midtermGrades = new ArrayList<MidtermGrade>();
 	}
 	
 	
@@ -70,6 +73,7 @@ public class Student {
 		this.courses = new ArrayList<Course>();
 		this.currentGrades = new ArrayList<CurrentGrade>();
 		this.finalGrades = new ArrayList<FinalGrade>();
+		this.midtermGrades = new ArrayList<MidtermGrade>();
 	}
 	
 	
@@ -84,7 +88,9 @@ public class Student {
 	public List<CurrentGrade> getCurrentGrades(){ return this.currentGrades; }
 	public String getTranscript() { return this.transcript; }
 	public List<FinalGrade> getFinalGrades(){ return this.finalGrades; }
+	public List<MidtermGrade> getMidtermGrades(){ return this.midtermGrades; }
 	public UndergradSummary getUndergradSummary(){ return this.undergradSummary; }
+	public AccountTotal getAccountTotal(){ return this.accountTotal; }
 	
 	
 	
@@ -317,6 +323,7 @@ public class Student {
 		
 		try {
 			
+			// Connect
 			HttpGet finalGet = new HttpGet("https://jweb.kettering.edu/cku1/wbwskogrd.P_ViewGrde?term_in=" + term + "&inam=on&snam=on&sgid=on");
 			HttpResponse response = this.clientBanner.execute(finalGet);
 			
@@ -329,28 +336,107 @@ public class Student {
 			
 			System.out.println("Successfully stored final grades to \"artifacts/finalgrades.html\"");
 			
+			Elements tables = Jsoup.parse(html).getElementsByClass("datadisplaytable");
+			
+			// Correct amount ?
+			if (tables.size() >= 3 && tables.get(2).getElementsByTag("tbody").size() > 0 && tables.get(1).getElementsByTag("tbody").size() > 0){
+				
+				// Store undergrad sum
+				this.undergradSummary = new UndergradSummary(tables.get(2).getElementsByTag("tbody").get(0).getElementsByTag("tr"));
+				
+				Elements courses = tables.get(1).getElementsByTag("tbody").get(0).getElementsByTag("tr");
+				
+				// Titles remove
+				if (courses.size() > 0) courses.remove(0);
+				
+				// Add final grades
+				for(int i = 0; i < courses.size();  i++){ this.finalGrades.add(new FinalGrade(courses.get(i).getElementsByTag("td"))); }
+				
+			}
+			
+		}
+		
+		catch(Exception e){ e.printStackTrace(); }
+
+	}
+	
+
+	/********************************************************************
+	 * Method: storeMidtermGrades()
+	 * Purpose: store midterm grades to memory
+	/*******************************************************************/
+	public void storeMidtermGrades(int term){
+		
+		try {
+			
+			// Connect
+			HttpGet midtermGet = new HttpGet("https://jweb.kettering.edu/cku1/bwskmgrd.p_write_midterm_grades?term_in=" + term);
+			HttpResponse response = this.clientBanner.execute(midtermGet);
+			
+			String html = HTMLParser.parse(response);
+			
+			// Write to file
+			PrintWriter printer = new PrintWriter("artifacts/midtermgrades.html");
+			printer.print(html);	    	
+			printer.close();
+			
+			System.out.println("Successfully stored midterm grades to \"artifacts/midtermgrades.html\"");
 			
 			Elements tables = Jsoup.parse(html).getElementsByClass("datadisplaytable");
 			
-			if (tables.size() >= 3 && tables.get(2).getElementsByTag("tbody").size() > 0 && tables.get(1).getElementsByTag("tbody").size() > 0){
+			// Correct amount ?
+			if (tables.size() >= 2 && tables.get(1).getElementsByTag("tbody").size() > 0){
 				
-				this.undergradSummary = new UndergradSummary(tables.get(2).getElementsByTag("tbody").get(0).getElementsByTag("tr"));
 				Elements courses = tables.get(1).getElementsByTag("tbody").get(0).getElementsByTag("tr");
-				courses.remove(0);
 				
-				for(int i = 0; i < courses.size();  i++){
-					this.finalGrades.add(new FinalGrade(courses.get(i).getElementsByTag("td")));
-					
-				}
+				// Titles remove
+				if(courses.size() > 0) courses.remove(0);
+				
+				
+				// Store midterm grades 
+				for(int i = 0; i < courses.size();  i++) this.midtermGrades.add(new MidtermGrade(courses.get(i).getElementsByTag("td")));
 				
 			}
+			
+		}
+		
+		catch(Exception e){ e.printStackTrace(); }
+	}
+	
+	
+	/********************************************************************
+	 * Method: storeAccount()
+	 * Purpose: store financial account information to memory
+	/*******************************************************************/
+	public void storeAccount(){
+		
+		try {
+			
+			// Connect
+			HttpGet accountGet = new HttpGet("https://jweb.kettering.edu/cku1/bwskoacc.P_ViewAcctTotal");
+			HttpResponse response = this.clientBanner.execute(accountGet);
+			
+			String html = HTMLParser.parse(response);
+			
+			// Write to file
+			PrintWriter printer = new PrintWriter("artifacts/accountTotal.html");
+			printer.print(html);	    	
+			printer.close();
+			
+			System.out.println("Successfully stored account total to \"artifacts/accountTotal.html\"");
+			
+			
+			Elements elements = Jsoup.parse(html).getElementsByClass("datadisplaytable");
+		
+			// Set account info
+			if(elements.size() > 0 && elements.get(0).getElementsByTag("tbody").size() > 0){ this.accountTotal = new AccountTotal(elements.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr")); }
 			
 			
 		}
 		
 		catch(Exception e){ e.printStackTrace(); }
 		
-	
 	}
+	
 }
 

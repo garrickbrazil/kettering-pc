@@ -19,8 +19,7 @@ public class MainApp {
 		Directory dir = new Directory();
 		
 		
-		
-		System.out.println("\n========== Directory Test ==========\n");
+		System.out.println("\n========== Directory ==========\n");
 
 		// Directory info
 		System.out.print("Search query: ");
@@ -39,7 +38,7 @@ public class MainApp {
 		else System.out.println(dir.getFacultyQuery().toString());
 		
 		
-		System.out.println("\n========== Login Test ==========\n");
+		System.out.println("\n========== Login ==========\n");
 
 		// User info
 		System.out.print("Username: ");
@@ -58,8 +57,10 @@ public class MainApp {
 		Menu menu = new Menu();
 		user.storeSchedule(201301);
 		user.storeFinalGrades(201201);
+		user.storeMidtermGrades(201201);
 		user.storeCurrentGrades();
 		user.storeTranscript();
+		user.storeAccount();
 
 		
 		System.out.println("\n\n========== Menu Print ==========\n");
@@ -73,6 +74,14 @@ public class MainApp {
 		System.out.println("\n\n========== Final Grades ==========\n");
 		for(int i = 0; i < user.getFinalGrades().size(); i++) System.out.println(user.getFinalGrades().get(i).toString());
 		System.out.println("\n" + user.getUndergradSummary().toString());
+		
+		
+		System.out.println("\n\n========== Midterm Grades ==========\n");
+		for(int i = 0; i < user.getMidtermGrades().size(); i++) System.out.println(user.getMidtermGrades().get(i).toString());
+		
+		
+		System.out.println("\n\n========== Account Total ==========\n");
+		System.out.println(user.getAccountTotal().toString());
 		
 		input.close();
 		
