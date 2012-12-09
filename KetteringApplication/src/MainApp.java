@@ -12,7 +12,6 @@ public class MainApp {
 	
 	public static void main(String[] args) throws EncoderException, ClientProtocolException, IOException {
 		
-
 		// Objects
 		Scanner input = new Scanner(System.in);
 		Student user = new Student();
@@ -61,13 +60,14 @@ public class MainApp {
 		user.storeCurrentGrades();
 		user.storeTranscript();
 		user.storeAccount();
+		user.storeDynamicCourses(201301);
 
 		
-		System.out.println("\n\n========== Menu Print ==========\n");
+		System.out.println("\n\n========== Menu ==========\n");
 		System.out.println(menu.toString());
 		
 		
-		System.out.println("\n\n========== Grades Print==========\n");
+		System.out.println("\n\n========== Current Grades ==========\n");
 		for(int i = 0; i < user.getCurrentGrades().size(); i++) if(user.getCurrentGrades().get(i).getValidCourseGrade()) System.out.println("\n" + user.getCurrentGrades().get(i).toString());
 		
 		

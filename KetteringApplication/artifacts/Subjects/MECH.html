@@ -1,0 +1,3017 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<HTML lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="X-UA-Compatible" NAME="Cache-Control" CONTENT="IE=EmulateIE7">
+<LINK REL="stylesheet" HREF="/css/web_defaultmenu.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<link rel="stylesheet" type="text/css" href="/css/app-overrides.css"/>
+<link rel="stylesheet" type="text/css" href="/css/common-platform.css"/>
+<link rel="stylesheet" type="text/css" href="/css/common-controls.css"/>
+<LINK REL="stylesheet" type="text/css" href="/css/jquery/jquery.autocomplete.css" />
+<LINK REL="stylesheet" type="text/css" href="/css/cascade.css" />
+<!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 8]><link href="/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<LINK REL="stylesheet" type="text/css" href="/css/cascade-print.css" media="print" />
+<script type="text/javascript" src="/js/jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.includeMany-1.2.0.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.history.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery-ui-personalized-1.5.3.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="/js/jquery/json2xml.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.jsonp-2.1.3.min.js"></script>
+<script type="text/javascript" src="/js/serviceProperties.js"></script>
+<script type="text/javascript" src="/js/common-controls-min.js"></script>
+<script type="text/javascript" src="/js/common-integrate-min.js"></script>
+<script type="text/javascript" src="/js/common-navigation-min.js"></script>
+<script type="text/javascript" src="/js/common-platform-min.js"></script>
+<script type="text/javascript" src="/js/cascade-utils-min.js"></script>
+<script type="text/javascript" src="/js/cascade-controls-min.js"></script>
+<script type="text/javascript" src="/js/udcxml-service-min.js"></script>
+<script type="text/javascript" src="/js/cascade-parser-min.js"></script>
+<script type="text/javascript" src="/js/cascade-ext-min.js"></script>
+<TITLE>Class Schedule Listing</TITLE>
+<META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var level_depth = "0";
+var userDetails = "";
+var wcMessage = "";
+var locale_val = "AMERICAN_AMERICA";
+var locale_lang = "en_US";
+var help_width= "450";
+var help_height = "500";
+//  End script hiding -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div id="headerImage">
+<IMG SRC="/css/images/Banner_header_173x12.png" CLASS="headerImg" TITLE=""  NAME="banner_header_173x12" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=12 WIDTH=173>
+</div>
+<DIV class="headerwrapperdiv">
+<DIV class="pageheaderdiv1">
+<A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+</DIV>
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
+         WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<DIV class="headerlinksdiv2">
+&nbsp;
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<SPAN class="pageheaderlinks">
+<A HREF="/wtlhelp/twghhelp.htm" accesskey="H" onClick="popup = window.open('/wtlhelp/twghhelp.htm', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="pagetitlediv">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
+   WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<H2>Class Schedule Listing</H2>
+</TD>
+<TD CLASS="pldefault">
+&nbsp;
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<DIV class="staticheaders">
+Winter 2013<br>
+Dec 09, 2012<br>
+</div>
+</TD>
+</TR>
+<TR>
+<TD class="bg3" width="100%" colSpan=3><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD>
+</TR>
+</TABLE>
+<a name="main_content"></a>
+</DIV>
+<DIV class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<BR>
+
+<INPUT TYPE="hidden" NAME="sel_crn" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="ADD_BTN" VALUE="dummy">
+<TABLE  CLASS="datadisplaytable" SUMMARY="This layout table is used to present the sections found" width="100%"><CAPTION class="captiontext">Sections Found</CAPTION>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10965">Engineering Graphical Communication - 10965 - MECH 100 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=100&amp;sel_crse_end=100&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=100&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MWR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2146</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Kent S  Eddy (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10966">Engineering Graphical Communication - 10966 - MECH 100 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=100&amp;sel_crse_end=100&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=100&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MWR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2146</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Kent S  Eddy (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11037">Statics - 11037 - MECH 210 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=210&amp;sel_crse_end=210&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=210&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1815</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Basem   Alzahabi (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10555">Statics - 10555 - MECH 210 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=210&amp;sel_crse_end=210&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=210&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1815</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Robert B  Salajekeh (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10755">Mechanics of Materials - 10755 - MECH 212 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=212&amp;sel_crse_end=212&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=212&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 1815</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Basem   Alzahabi (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10756">Mechanics of Materials - 10756 - MECH 212 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=212&amp;sel_crse_end=212&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=212&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 2759</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Jacqueline Annette  El-Sayed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10959">Mechanics of Materials - 10959 - MECH 212 - 03</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=212&amp;sel_crse_end=212&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=212&amp;p_seq_in=03">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 1819</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Laura L  Sullivan (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:dr.laura2@gmail.com"    target="Laura L. Sullivan" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10950">Signals for Mechanical Systems Lab - 10950 - MECH 231L - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Must sign up for EE 212
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=231L&amp;sel_crse_end=231L&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=231L&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2234</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Brenda S  Lemke (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10951">Signals for Mechanical Systems Lab - 10951 - MECH 231L - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Must sign up for EE 212
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=231L&amp;sel_crse_end=231L&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=231L&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2234</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Brenda S  Lemke (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10953">Signals for Mechanical Systems Lab - 10953 - MECH 231L - 04</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Must sign up for EE 212
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=231L&amp;sel_crse_end=231L&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=231L&amp;p_seq_in=04">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2234</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Brenda S  Lemke (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10873">Computer Aided Engineering - 10873 - MECH 300 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=300&amp;sel_crse_end=300&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=300&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">TWF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2130</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Paul H  Zang (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:pzang@kettering.edu"    target="Paul H. Zang" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10874">Computer Aided Engineering - 10874 - MECH 300 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=300&amp;sel_crse_end=300&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=300&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">TWF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2130</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Maciej   Zgorzelski (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10875">Computer Aided Engineering - 10875 - MECH 300 - 03</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=300&amp;sel_crse_end=300&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=300&amp;p_seq_in=03">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">TWF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2130</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Maciej   Zgorzelski (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10558">Dynamics - 10558 - MECH 310 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=310&amp;sel_crse_end=310&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=310&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1817</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Massoud S  Tavakoli (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11848">Dynamics - 11848 - MECH 310 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=310&amp;sel_crse_end=310&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=310&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1815</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Massoud S  Tavakoli (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10940">Introduction to Mechanical System Design - 10940 - MECH 311 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=311&amp;sel_crse_end=311&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=311&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MWR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2116</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Dale P  Eddy (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10960">Introduction to Mechanical System Design - 10960 - MECH 311 - 03</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=311&amp;sel_crse_end=311&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=311&amp;p_seq_in=03">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MWR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2116</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Jeffrey B  Hargrove (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10560">Mechanical Component Design I - 10560 - MECH 312 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=312&amp;sel_crse_end=312&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=312&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 1817</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Theresa S  Atkinson (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:atkinson.theresa@comcast.net"    target="Theresa S. Atkinson" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10561">Mechanical Component Design I - 10561 - MECH 312 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=312&amp;sel_crse_end=312&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=312&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 1817</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Theresa S  Atkinson (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:atkinson.theresa@comcast.net"    target="Theresa S. Atkinson" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10571">Thermodynamics - 10571 - MECH 320 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=320&amp;sel_crse_end=320&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=320&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1817</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Etim Udosen  Ubong (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10572">Thermodynamics - 10572 - MECH 320 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=320&amp;sel_crse_end=320&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=320&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1819</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Etim Udosen  Ubong (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10574">Fluid Mechanics - 10574 - MECH 322 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=322&amp;sel_crse_end=322&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=322&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 2907</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Susanta K  Das (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:sdas@kettering.edu"    target="Susanta K. Das" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10575">Fluid Mechanics - 10575 - MECH 322 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=322&amp;sel_crse_end=322&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=322&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1107</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Gianfranco   DiGiuseppe (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10563">Dynamic Systems with Vibrations - 10563 - MECH 330 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=330&amp;sel_crse_end=330&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=330&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1221</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Janet   Brelin-Fornari (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10564">Dynamic Systems with Vibrations - 10564 - MECH 330 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=330&amp;sel_crse_end=330&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=330&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1221</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Janet   Brelin-Fornari (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10742">Introduction to Bioengineering Applications - 10742 - MECH 350 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=350&amp;sel_crse_end=350&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=350&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3225</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Patrick J  Atkinson (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:patkinso@kettering.edu"    target="Patrick J. Atkinson" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10740">Mechanical Component Design II - 10740 - MECH 412 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=412&amp;sel_crse_end=412&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=412&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 1815</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Richard E  Dippery (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:rdippery@kettering.edu"    target="Richard E. Dippery" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10577">Heat Transfer - 10577 - MECH 420 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=420&amp;sel_crse_end=420&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=420&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 1819</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Kingsley J  Berry (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10578">Heat Transfer - 10578 - MECH 420 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=420&amp;sel_crse_end=420&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=420&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2240</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Kingsley J  Berry (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10580">Energy Systems Laboratory - 10580 - MECH 422 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Must register for linked lab
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=422&amp;sel_crse_end=422&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=422&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">Academic Building 1819</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Mohammad F  Ali (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10581">Energy Systems Laboratory - 10581 - MECH 422 - 02L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=422&amp;sel_crse_end=422&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=422&amp;p_seq_in=02L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2126</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Susanta K  Das (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:sdas@kettering.edu"    target="Susanta K. Das" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10582">Energy Systems Laboratory - 10582 - MECH 422 - 03L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=422&amp;sel_crse_end=422&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=422&amp;p_seq_in=03L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2126</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Etim Udosen  Ubong (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10583">Energy Systems Laboratory - 10583 - MECH 422 - 04L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=422&amp;sel_crse_end=422&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=422&amp;p_seq_in=04L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2126</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Mohammad F  Ali (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10584">Energy Systems Laboratory - 10584 - MECH 422 - 05L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=422&amp;sel_crse_end=422&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=422&amp;p_seq_in=05L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2126</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Homayun K  Navaz (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10566">Dynamic Systems with Controls - 10566 - MECH 430 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+All students must sign up for section 01 or 02 <br>
+lecture and a lab. Must register for linked lab
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=430&amp;sel_crse_end=430&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=430&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">Academic Building 1817</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ram S  Chandran (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10567">Dynamic Systems with Controls - 10567 - MECH 430 - 02L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=430&amp;sel_crse_end=430&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=430&amp;p_seq_in=02L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2240</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Ram S  Chandran (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10568">Dynamic Systems with Controls - 10568 - MECH 430 - 03L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Combined Lecture/Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=430&amp;sel_crse_end=430&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=430&amp;p_seq_in=03L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2240</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Combined Lecture/Lab</TD>
+<TD CLASS="dddefault">Ram S  Chandran (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10569">Dynamic Systems with Controls - 10569 - MECH 430 - 04L</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       0.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=430&amp;sel_crse_end=430&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=430&amp;p_seq_in=04L">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2240</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Ram S  Chandran (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11163">Experimental Mechanics - 11163 - MECH 514 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=514&amp;sel_crse_end=514&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=514&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">6:00 pm - 9:00 pm</TD>
+<TD CLASS="dddefault">MW</TD>
+<TD CLASS="dddefault">Academic Building 1819</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Henry C  Kowalski (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10703">Failure and Material Considerations in Design - 10703 - MECH 515 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=515&amp;sel_crse_end=515&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=515&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 6:30 pm</TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Campus Center G</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Richard E  Dippery (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:rdippery@kettering.edu"    target="Richard E. Dippery" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10786">Failure and Material Considerations in Design - 10786 - MECH 515 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=515&amp;sel_crse_end=515&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=515&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Richard E  Dippery (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:rdippery@kettering.edu"    target="Richard E. Dippery" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11886">Introduction to Finite Element Analysis with Structural Applications - 11886 - MECH 516 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=516&amp;sel_crse_end=516&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=516&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">M</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Raghu   Echempati (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10993">Energy and Environmental Systems Design - 10993 - MECH 521 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=521&amp;sel_crse_end=521&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=521&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1107</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ahmad   Pourmovahed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11850">Introduction to Multiphysics Modeling and Simulation in Fluid Mechanics and Heat Transfer - 11850 - MECH 525 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=525&amp;sel_crse_end=525&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=525&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2130</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Gianfranco   DiGiuseppe (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11041">Energy and the Environment - 11041 - MECH 527 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=527&amp;sel_crse_end=527&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=527&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">M</TD>
+<TD CLASS="dddefault">Campus Center J</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ahmad   Pourmovahed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">F</TD>
+<TD CLASS="dddefault">Campus Center J</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ahmad   Pourmovahed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11832">Energy and the Environment - 11832 - MECH 527 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=527&amp;sel_crse_end=527&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=527&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">T</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Ahmad   Pourmovahed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10779">Advanced Automotive Power Systems - 10779 - MECH 541 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=541&amp;sel_crse_end=541&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=541&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1133</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Gregory W  Davis (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10991">Introduction to Automotive Powertrains - 10991 - MECH 544 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=544&amp;sel_crse_end=544&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=544&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Campus Center 1250</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Gregory W  Davis (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10901">Hybrid Electric Vehicle Propulsion - 10901 - MECH 545 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=545&amp;sel_crse_end=545&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=545&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2130</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Craig J  Hoff (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10919">Hybrid Electric Vehicle Propulsion - 10919 - MECH 545 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=545&amp;sel_crse_end=545&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=545&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">M</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Craig J  Hoff (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11851">Vehicle Design Project - 11851 - MECH 548 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=548&amp;sel_crse_end=548&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=548&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1107</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ahmad   Pourmovahed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10706">Automotive Bioengineering: Occupant Protection and Safety - 10706 - MECH 550 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=550&amp;sel_crse_end=550&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=550&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 1221</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Patrick J  Atkinson (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:patkinso@kettering.edu"    target="Patrick J. Atkinson" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11853">Bioengineering Applications Project - 11853 - MECH 554 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=554&amp;sel_crse_end=554&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=554&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2116</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Jeffrey B  Hargrove (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11869">Composite Materials - 11869 - MECH 582 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=582&amp;sel_crse_end=582&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=582&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">6:00 pm - 8:00 pm</TD>
+<TD CLASS="dddefault">TR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 2240</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Yaomin   Dong (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11835">Mechanics of Materials I: Linear Elasticity - 11835 - MECH 610 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=610&amp;sel_crse_end=610&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=610&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">M</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Richard E  Dippery (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:rdippery@kettering.edu"    target="Richard E. Dippery" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10850">Computational Heat and Mass Transfer - 10850 - MECH 622 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=622&amp;sel_crse_end=622&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=622&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">9:00 am - 11:00 am</TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Campus Center G</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Homayun K  Navaz (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">11:30 am - 1:30 pm</TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Campus Center G</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Homayun K  Navaz (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11335">Computational Heat and Mass Transfer - 11335 - MECH 622 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=622&amp;sel_crse_end=622&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=622&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Homayun K  Navaz (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11076">Green Energy Conversion - 11076 - MECH 627 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Previously taped course - media will be shipped to students
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=627&amp;sel_crse_end=627&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=627&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">M</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Ahmad   Pourmovahed (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10747">Noise, Vibration & Harshness - 10747 - MECH 643 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Previously taped course - media will be shipped to students.
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=643&amp;sel_crse_end=643&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=643&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">9:05 am - 12:05 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">Campus Center G</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Basem   Alzahabi (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11986">Noise, Vibration & Harshness - 11986 - MECH 643 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MECH&amp;sel_crse_strt=643&amp;sel_crse_end=643&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MECH&amp;p_crse_numb_in=643&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Basem   Alzahabi (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<TABLE  CLASS="datadisplaytable" summary="This is for formatting of the bottom links." WIDTH="50%">
+<TR>
+<TD CLASS="ntdefault">
+<A HREF="javascript:history.go(-1)" onMouseOver="window.status='Return to Previous';  return true" onFocus="window.status='Return to Previous';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">Return to Previous</A>
+</TD>
+</TR>
+</TABLE>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<TABLE  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
+                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><TR><TD class="bgtabon" width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+<A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+</DIV>
+<DIV class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.5.1</SPAN>
+</DIV>
+<DIV class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+</BODY>
+</HTML>

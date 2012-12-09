@@ -1,9 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><!-- view-grades.jsp -->
-
-   
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html  lang="en-US"> 
  <head>
-  <title>My Grades</title>
+  <title>Grade Center Error</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta id="request-method" name="request-method" content="GET">
   <meta name="author" content="Blackboard">
@@ -14,8 +12,6 @@
   <link rel="SHORTCUT ICON" type="image/x-icon" href="/ui/bb-icon2.ico">
     <link rel="stylesheet" type="text/css" href="/branding/themes/Kett_BB/theme.css?v=9.1.50119.0">
     <link rel="stylesheet" type="text/css" href="/branding/_1_1/brand.css?ts=1328783130000&v=9.1.50119.0">
-    <link rel="stylesheet" type="text/css" href="/ui/styles/bb-gradebook.css?v=9.1.50119.0">
-    <link rel="stylesheet" type="text/css" href="/ui/styles/gradebook2.css?v=9.1.50119.0">
           <style type="text/css">
 
 #courseMenuPalette div.navPaletteContent ul li a, #courseMenuPalette div.navPaletteContent ul li span
@@ -192,17 +188,12 @@ _init_bundle_LOCALE_SETTINGS();
     <script type="text/javascript" src="/javascript/validateForm.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/accessibleSelect.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/popup.js?v=9.1.50119.0"></script>
-    <script type="text/javascript" src="/javascript/scriptaculous/effects.js?v=9.1.50119.0"></script>
-    <script type="text/javascript" src="/javascript/ngui/lightbox.js?v=9.1.50119.0"></script>
-    <script type="text/javascript" src="/webapps/gradebook/js/mygrades_utils.js?v=9.1.50119.0"></script>
-    <script type="text/javascript" src="/webapps/gradebook/js/gradebook_utils.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/titlebartagutils.js?v=9.1.50119.0"></script>
-    <script type="text/javascript" src="/webapps/gradebook/dwr_open/interface/UserPageInstructionsSettingDWRFacade.js?v=9.1.50119.0"></script>
-    <script type="text/javascript" src="/javascript/dwr/engine.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/ngui/tree.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/ngui/coursemenu.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/webapps/gradebook/dwr_open/interface/UserDataDWRFacade.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/webapps/gradebook/dwr_open/interface/CourseMenuDWRFacade.js?v=9.1.50119.0"></script>
+    <script type="text/javascript" src="/javascript/dwr/engine.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/dwr/util.js?v=9.1.50119.0"></script>
     <script type="text/javascript" src="/javascript/browserSpecificBehavior.js?v=9.1.50119.0"></script>
     </head>
@@ -212,39 +203,18 @@ _init_bundle_LOCALE_SETTINGS();
  Current Location
 </h2>
 
-<div id="breadcrumbs" class="breadcrumbs ">
- <div class="topRound"><b class="outer"></b><b class="middle"></b><b class="inner"></b></div>
- <div class="path  noToggle" role="wairole:breadcrumbs">
- <ol class="clearfix">
-    	<li
-    class="root"
-        > <a href="/webapps/blackboard/execute/courseMain?course_id=_326159_1" target="content">COOP-002-01: Co-op Educat Exp - Employed - FALL</a>        </li>
-   	<li
-    class="placeholder"
-        > My Grades        </li>
-  </ol>
- </div>
-
-<div id="helpTextToggle" class="helpLink hidden">
-  <a href="#" id="helpTextToggleLink" class="browseIcon">
-	<img id="helpTextToggleImg" src="/images/ci/ng/small_help_on2.gif" alt="Turn help text off and on"/></a>
-</div>
- <input type='hidden' name='showHelperSetting' id='showHelperSetting' value=''>
- <div class="bottomRound"><b class="inner"></b><b class="middle"></b><b class="outer"></b></div>
-</div>
-
 <div class="locationPane">
  <div id="navigationPane" class="navigationPane ">
  <div id="puller" >
-  <a id="menuPuller" class="clickpuller" title="Hide Course Menu" href="#">
-   <img id="expander" alt="Hide Course Menu" src="/images/spacer.gif"/>
+  <a id="menuPuller" class="clickpuller" title="Hide Organization Menu" href="#">
+   <img id="expander" alt="Hide Organization Menu" src="/images/spacer.gif"/>
   </a>
  </div>
  <div id="menuWrap" class="menuWrap" >
 <div class="menuWrap-inner">
   
 <!-- add old style nonce Id to the page, since there is no way to use the nonceId attribute as part of the bbNG:form tag-->
-<input type='hidden' name='blackboard.platform.security.NonceUtil.nonce' value='778bade5-f0ab-4ca1-83f5-b6f8149df63a'>
+<input type='hidden' name='blackboard.platform.security.NonceUtil.nonce' value='3cfc7e53-88cc-4ee5-86e6-385db1fff83d'>
 
 
 
@@ -265,8 +235,8 @@ _init_bundle_LOCALE_SETTINGS();
  <a href="#" title="Folder View"><img src="/images/ci/ng/small_detail_view.gif" alt="Folder View"></a>
 
 </li><li id="detailViewLink2" class="secondaryButton  sub">
- <a href="#" title="Folder View (Click to see options)" id="cmlink_502fc2759365464aa91a20d128abc525"><img src="/images/ci/ng/small_detail_view.gif" alt="Folder View (Click to see options)"></a>
- <ul id="cmul0_502fc2759365464aa91a20d128abc525">
+ <a href="#" title="Folder View (Click to see options)" id="cmlink_f38e5975b47a4da58ae4ca73e25dfd70"><img src="/images/ci/ng/small_detail_view.gif" alt="Folder View (Click to see options)"></a>
+ <ul id="cmul0_f38e5975b47a4da58ae4ca73e25dfd70">
      <li><a href="#" id="expandAllLink"  >Expand All</a></li>
      <li><a href="#" id="collapseAllLink"  >Collapse All</a></li>
    </ul>
@@ -278,23 +248,20 @@ _init_bundle_LOCALE_SETTINGS();
   </ul>
    </div>
   <div class="navPaletteContent">
-          <h2 class="hideoff">Course Menu:</h2>
+          <h2 class="hideoff">Organization Menu:</h2>
          <div id="courseMenuPalette_paletteTitleHeading">
     <div class="navPaletteTitle">
               <h3>
-      <a href="#" class="comboLink" title="Collapse COOP-002-01: Co-op Educat Exp - Employed - FALL" id="courseMenu_link"><img src="/images/ci/icons/generic_collapase.gif" class="hideoff" alt="Collapse">COOP-002-01: Co-op Educat Exp - Employed - FALL</a>
+      <a href="#" class="comboLink" title="Collapse Thesis Services" id="courseMenu_link"><img src="/images/ci/icons/generic_collapase.gif" class="hideoff" alt="Collapse">Thesis Services</a>
      </h3>
      <h3>
-      <a href="/webapps/blackboard/execute/courseMain?course_id=_326159_1" target="content" class="submenuLink" id="courseMenu_combo" title="Go to Course Entry Page"><img src="/images/ci/icons/generic_dbl_arrow_right.gif" alt="Course Entry Page"></a>
+      <a href="/webapps/blackboard/execute/courseMain?course_id=_51827_1" target="content" class="submenuLink" id="courseMenu_combo" title="Go to Organization Entry Page"><img src="/images/ci/icons/generic_dbl_arrow_right.gif" alt="Organization Entry Page"></a>
      </h3>
         </div>
    </div>                               
     <ul id="courseMenuPalette_contents" class="courseMenu">
-   <li id="paletteItem:_336745_1" class="clearfix "> <a href="/webapps/blackboard/content/launchLink.jsp?course_id=_326159_1&toc_id=_336745_1&mode=view&mode=reset&courseTocLabel=COURSE_DEFAULT.BulletinBoard.MODULE.label" target="_self"><span title="Home Page">Home Page</span></a>
-       </li><li id="paletteItem:_336748_1" class="clearfix "> <a href="/webapps/blackboard/content/launchLink.jsp?course_id=_326159_1&tool_id=_137_1&tool_type=TOOL&mode=view&mode=reset&courseTocLabel=COURSE_DEFAULT.Discussions.APPLICATION.label" target="_self"><span title="Discussions">Discussions</span></a>
-       </li><li id="paletteItem:_336749_1" class="clearfix "> <a href="/webapps/blackboard/content/launchLink.jsp?course_id=_326159_1&tool_id=_136_1&tool_type=TOOL&mode=view&mode=reset&courseTocLabel=COURSE_DEFAULT.Groups.APPLICATION.label" target="_self"><span title="Groups">Groups</span></a>
-       </li><li id="paletteItem:_336750_1" class="clearfix "> <a href="/webapps/blackboard/content/launchLink.jsp?course_id=_326159_1&tool_id=_11_1&tool_type=TOOL&mode=view&mode=reset&courseTocLabel=COURSE_DEFAULT.Tools.APPLICATION.label" target="_self"><span title="Tools">Tools</span></a>
-       </li><li id="paletteItem:_336751_1" class="clearfix "> <a href="/webapps/blackboard/content/launchLink.jsp?course_id=_326159_1&tool_id=_196_1&tool_type=TOOL&mode=view&mode=reset&courseTocLabel=COURSE_DEFAULT.Help.APPLICATION.label" target="_new"><span title="Help">Help</span></a>
+   <li id="paletteItem:_118576_1" class="clearfix "> <a href="https://blackboard.kettering.edu/webapps/blackboard/content/listContent.jsp?course_id=_51827_1&content_id=_155752_1&mode=reset&courseTocLabel=Faculty+Information" target="_self"><span title="Faculty Information">Faculty Information</span></a>
+       </li><li id="paletteItem:_103602_1" class="clearfix "> <a href="https://blackboard.kettering.edu/webapps/blackboard/content/listContent.jsp?course_id=_51827_1&content_id=_127145_1&mode=reset&courseTocLabel=Student+Information" target="_self"><span title="Student Information">Student Information</span></a>
        </li>
   </ul>
  </div>
@@ -307,7 +274,7 @@ _init_bundle_LOCALE_SETTINGS();
   </div>
  </div>
  </div>
- <div id="contentPanel" class="contentPane  ">
+ <div id="contentPanel" class="contentPane error ok ">
 <div class="shadow">
      <div id="editmodeWrapper"> 
  
@@ -319,8 +286,8 @@ _init_bundle_LOCALE_SETTINGS();
 <div id="pageTitleDiv" class="pageTitle clearfix">
  
 
-  <img src="/images/ci/sets/set02/grades_on.gif" alt="" id="titleicon"><h1 ><span id="pageTitleText">
-  <span style="color:;">My Grades</span>  </span></h1>
+  <img src="/images/ci/sets/set02/editpage_on.gif" alt="" id="titleicon"><h1 ><span id="pageTitleText">
+  <span style="color:;">Error</span>  </span></h1>
     <span id="_titlebarExtraContent" class="titleButtons"></span>
 
 
@@ -328,74 +295,134 @@ _init_bundle_LOCALE_SETTINGS();
 
       <div class="container clearfix" id="containerdiv">
     <h2 class="hideoff">Content</h2>
-    <div class="clearfix">
-      <table class="attachments mygrades" summary="This table contains a list of my grades">
-        <tbody>
+    <div id="bbNG.receiptTag.content" tabindex="0">This action is prohibited.<P><span class="captionText">For reference, the Error ID is 69f19a3b-c3d9-421e-842e-5b21264e5615.</span>
 
-          <tr>
-            <th height="24" id="title" width="10%" style="max-width:10%;" nowrap="true"><span style="padding-left:5">Item Name</span></th>
-            <th height="24" id="details" width="10%" nowrap="true"><span>Details</span></th>
-            <th height="24" id="duedate" width="15%" nowrap="true"><span></span>            </th>
-            <th height="24" id="lastSubmissiondate" width="15%"><span>Last Student Activity</span></th>
-            <th height="24" id="lastdate" width="15%"><span>Last Instructor Activity</span></th>             
-            <th height="24" id="grade" width="8%" nowrap="true">Grade</th>
-            <th height="24" id="possible" width="8%" nowrap="true"><span>Points Possible</span></th>
-            <th height="24" id="comment" width="40%" nowrap="true">Comments</th>
-          </tr>
+<!--This error can also be found in the error logs under the ID 69f19a3b-c3d9-421e-842e-5b21264e5615:
+java.lang.Exception: This action is prohibited.
+	at blackboard.webapps.gradebook.struts.actions.ViewStudentGradesAction.assertToolIsEnabled(ViewStudentGradesAction.java:173)
+	at blackboard.webapps.gradebook.struts.actions.ViewStudentGradesAction.execute(ViewStudentGradesAction.java:91)
+	at org.apache.struts.chain.commands.servlet.ExecuteAction.execute(ExecuteAction.java:53)
+	at org.apache.struts.chain.commands.AbstractExecuteAction.execute(AbstractExecuteAction.java:64)
+	at org.apache.struts.chain.commands.ActionCommandBase.execute(ActionCommandBase.java:48)
+	at org.apache.commons.chain.impl.ChainBase.execute(ChainBase.java:191)
+	at org.apache.commons.chain.generic.LookupCommand.execute(LookupCommand.java:305)
+	at org.apache.commons.chain.impl.ChainBase.execute(ChainBase.java:191)
+	at org.apache.struts.chain.ComposableRequestProcessor.process(ComposableRequestProcessor.java:280)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1858)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:446)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at blackboard.struts.BbActionServlet.service(BbActionServlet.java:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at sun.reflect.GeneratedMethodAccessor314.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.security.SecurityUtil$1.run(SecurityUtil.java:269)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:517)
+	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:301)
+	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:283)
+	at org.apache.catalina.core.ApplicationFilterChain.access$000(ApplicationFilterChain.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain$1.run(ApplicationFilterChain.java:189)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:185)
+	at blackboard.platform.servlet.B2ContextFilter.doFilter(B2ContextFilter.java:100)
+	at sun.reflect.GeneratedMethodAccessor313.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.security.SecurityUtil$1.run(SecurityUtil.java:269)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:517)
+	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:301)
+	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.access$000(ApplicationFilterChain.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain$1.run(ApplicationFilterChain.java:189)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:185)
+	at blackboard.platform.servlet.ContentTypeFilter.doFilter(ContentTypeFilter.java:57)
+	at sun.reflect.GeneratedMethodAccessor312.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.security.SecurityUtil$1.run(SecurityUtil.java:269)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:517)
+	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:301)
+	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.access$000(ApplicationFilterChain.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain$1.run(ApplicationFilterChain.java:189)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:185)
+	at blackboard.platform.servlet.XssServletFilter.doFilter(XssServletFilter.java:138)
+	at sun.reflect.GeneratedMethodAccessor311.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.security.SecurityUtil$1.run(SecurityUtil.java:269)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:517)
+	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:301)
+	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.access$000(ApplicationFilterChain.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain$1.run(ApplicationFilterChain.java:189)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:185)
+	at blackboard.platform.servlet.RequestSessionFilter.doFilter(RequestSessionFilter.java:184)
+	at sun.reflect.GeneratedMethodAccessor310.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.security.SecurityUtil$1.run(SecurityUtil.java:269)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:517)
+	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:301)
+	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.access$000(ApplicationFilterChain.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain$1.run(ApplicationFilterChain.java:189)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:185)
+	at blackboard.platform.servlet.SSLProxyFilter.doFilter(SSLProxyFilter.java:39)
+	at sun.reflect.GeneratedMethodAccessor309.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.security.SecurityUtil$1.run(SecurityUtil.java:269)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAsPrivileged(Subject.java:517)
+	at org.apache.catalina.security.SecurityUtil.execute(SecurityUtil.java:301)
+	at org.apache.catalina.security.SecurityUtil.doAsPrivilege(SecurityUtil.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.access$000(ApplicationFilterChain.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain$1.run(ApplicationFilterChain.java:189)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:567)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.jk.server.JkCoyoteHandler.invoke(JkCoyoteHandler.java:190)
+	at org.apache.jk.common.HandlerRequest.invoke(HandlerRequest.java:291)
+	at org.apache.jk.common.ChannelSocket.invoke(ChannelSocket.java:769)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:698)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:891)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Thread.java:619)
 
-          <tr>
-            <th id="0" height="24" nowrap="true">Weighted Total</th>
-            <td headers="details 0" height="24">
-              <a role="presentation" href="#" onClick="return mygrades_utils.showComment(event, this, 'def_234442', 'TD')" class="browse">Details</a>
-              <div id="def_234442" class="hideoff"><strong>Grading Criteria:</strong> None<br>
-                <strong>Description:</strong> The weighted sum of all grades for a user based on item or category weighting.</div>
-             </td>
-            <td headers="duedate 0" height="24"></td>        
-            <td headers="lastSubmisstionDate 0" height="24"></td>
-            <td headers="lastActivityDate 0" height="24"></td>
-            <td headers="grade 0" height="24">-</td>
-            <td headers="possible 0" height="24">0</td>
+//-->
+</div><p><span class="receiptDate">Sunday, December 9, 2012 3:06:37 AM EST</span></p>
 
-             <td headers="comment 0" height="24">
-	          </td>
-          </tr>
-          <tr>
-            <th id="1" height="24" nowrap="true">Total</th>
-            <td headers="details 1" height="24">
-              <a role="presentation" href="#" onClick="return mygrades_utils.showComment(event, this, 'def_234441', 'TD')" class="browse">Details</a>
-              <div id="def_234441" class="hideoff"><strong>Grading Criteria:</strong> Running Total of all grades<br>
-                <strong>Description:</strong> The unweighted sum of all grades for a user.</div>
-             </td>
-            <td headers="duedate 1" height="24"></td>        
-            <td headers="lastSubmisstionDate 1" height="24"></td>
-            <td headers="lastActivityDate 1" height="24"></td>
-            <td headers="grade 1" height="24">-</td>
-            <td headers="possible 1" height="24">0</td>
 
-             <td headers="comment 1" height="24">
-	          </td>
-          </tr>
-          </tbody>
-      </table>
-      </div>
-    <div class="iconlegend" id="iconLegendLinkDiv" ><a  class="browse iconlegendlink" href="#" id="iconLegendLink" title="Click to see what all the icons mean" onclick="return mygrades_utils.showIconLegend( event );">Icon Legend</a></div>
-      
-   <div class="bubble bottom right" id="icondiv"  style="left=-5000px;">
-     <ul>
-       <li><span class="icon"><img src='/images/ci/gradebook/grade_completed.gif' alt='Completed'></span><span class="label">Completed</span></li>
-       <li><span class="icon"><img src='/images/ci/gradebook/needs_grading.gif' alt='Needs Grading'></span><span class="label">Needs Grading</span></li>
-       <li><span class="icon"><img src='/images/ci/gradebook/grading_in_progress.gif' alt='Attempt in Progress'></span><span class="label">Attempt in Progress</span></li>
-       <li><span class="icon"><img src='/images/ci/gradebook/exempt.gif' alt='Grade Exempted for this User'></span><span class="label">Grade Exempted for this User</span></li>
-       <li><span class="icon"><img src='/images/ci/icons/grade_warning.gif' alt='Error'></span><span class="label">Error</span></li>
-    </ul>
-   <div class="bubbleStem"><img src="/branding/themes/Kett_BB/images/bubble_bottom_2.gif" alt="" /></div>
-   </div>
+<p class="backLink">  
+               
+<a href="javascript:history.go(-1)"                                                                                              >
+    OK
+  </a>
 
-   <div id="commentDiv" class="bubble comments liveArea-slim" style="display:none;">
-     <div class="bubArrowTop" id="commentArrowUp"></div>
-     <div class="comText detailComments"> <div id="commentDivText"></div> </div>
-   </div>
-
+</p>  
+  
    </div>
    
      </div> 
@@ -406,24 +433,12 @@ _init_bundle_LOCALE_SETTINGS();
    </div>
    </div>  
 </div>
-  <script type="text/javascript">page.bundle.addKey('breadcrumbs.expand','Click to expand the breadcrumbs');page.bundle.addKey('expandCollapse.expand.section.param','Expand {0}');page.bundle.addKey('dynamictree.expand.folder','Expand {0} tree folder');page.bundle.addKey('entryPointChangeConfirmStr','The entry point will changed to the next available Content');page.bundle.addKey('yt.paused','Paused:');page.bundle.addKey('expandCollapse.collapse.section.nocolon','Collapse');page.bundle.addKey('yt.buffering','Buffering:');page.bundle.addKey('dynamictree.collapse.folder','Collapse {0} tree folder');page.bundle.addKey('lightbox.overlay','Lightbox will have a overlay.');page.bundle.addKey('confirmQuickEnrollStr','You will be given the role: {0}. Proceed?');page.bundle.addKey('inlineconfirmation.refresh','Refresh');page.bundle.addKey('moreOptionsStr','Click to see options');page.bundle.addKey('yt.cued','Cued:');page.bundle.addKey('hidden.link.close.form','End of form. Click to return to associated item.');page.bundle.addKey('dragdrop.accessible.empty','No items available to reposition.');page.bundle.addKey('emptyStr','This link has no content');page.bundle.addKey('yt.stopped','Stopped:');page.bundle.addKey('hidden.link.close.menu','End of menu. Click to return to associated item.');page.bundle.addKey('dragdrop.accessible.error.chooseOption','Select an item first.');page.bundle.addKey('hiddenStr','This link is hidden from students');page.bundle.addKey('yt.mute','Mute');page.bundle.addKey('coursemenu.show','Show Course Menu');page.bundle.addKey('expandCollapse.collapse.section.param','Collapse {0}');page.bundle.addKey('dragdrop.accessible.complete','Items have been reordered.');page.bundle.addKey('expandCollapse.expand.section.nocolon','Expand');page.bundle.addKey('lightbox.loading','Loading...');page.bundle.addKey('frameset.contentframe.title','Content');page.bundle.addKey('inlineconfirmation.close','Close');page.bundle.addKey('enterSearchKeyStr','Enter Search Criteria.');page.bundle.addKey('dynamictree.expand','Expand');page.bundle.addKey('yt.ended','Ended:');page.bundle.addKey('subheaderColonStr','Subheader: {0}');page.bundle.addKey('closeStr','Close');page.bundle.addKey('yt.play','Play');page.bundle.addKey('yt.playing','Playing:');page.bundle.addKey('yt.unmute','Unmute');page.bundle.addKey('dynamictree.collapse','Collapse');page.bundle.addKey('contextmenu.frame.title','Menu frame');page.bundle.addKey('dragdrop.accessible.complete.nochange','No ordering changes made.');page.bundle.addKey('yt.pause','Pause');page.bundle.addKey('coursemenu.hide','Hide Course Menu');</script>
+  <script type="text/javascript">page.bundle.addKey('expandCollapse.expand.section.param','Expand {0}');page.bundle.addKey('dynamictree.expand.folder','Expand {0} tree folder');page.bundle.addKey('entryPointChangeConfirmStr','The entry point will changed to the next available Content');page.bundle.addKey('yt.paused','Paused:');page.bundle.addKey('expandCollapse.collapse.section.nocolon','Collapse');page.bundle.addKey('yt.buffering','Buffering:');page.bundle.addKey('dynamictree.collapse.folder','Collapse {0} tree folder');page.bundle.addKey('lightbox.overlay','Lightbox will have a overlay.');page.bundle.addKey('confirmQuickEnrollStr','You will be given the role: {0}. Proceed?');page.bundle.addKey('inlineconfirmation.refresh','Refresh');page.bundle.addKey('moreOptionsStr','Click to see options');page.bundle.addKey('yt.cued','Cued:');page.bundle.addKey('hidden.link.close.form','End of form. Click to return to associated item.');page.bundle.addKey('dragdrop.accessible.empty','No items available to reposition.');page.bundle.addKey('emptyStr','This link has no content');page.bundle.addKey('yt.stopped','Stopped:');page.bundle.addKey('hidden.link.close.menu','End of menu. Click to return to associated item.');page.bundle.addKey('dragdrop.accessible.error.chooseOption','Select an item first.');page.bundle.addKey('hiddenStr','This link is hidden from students');page.bundle.addKey('yt.mute','Mute');page.bundle.addKey('coursemenu.show','Show Organization Menu');page.bundle.addKey('expandCollapse.collapse.section.param','Collapse {0}');page.bundle.addKey('dragdrop.accessible.complete','Items have been reordered.');page.bundle.addKey('expandCollapse.expand.section.nocolon','Expand');page.bundle.addKey('lightbox.loading','Loading...');page.bundle.addKey('frameset.contentframe.title','Content');page.bundle.addKey('inlineconfirmation.close','Close');page.bundle.addKey('enterSearchKeyStr','Enter Search Criteria.');page.bundle.addKey('dynamictree.expand','Expand');page.bundle.addKey('yt.ended','Ended:');page.bundle.addKey('subheaderColonStr','Subheader: {0}');page.bundle.addKey('closeStr','Close');page.bundle.addKey('yt.play','Play');page.bundle.addKey('yt.playing','Playing:');page.bundle.addKey('yt.unmute','Unmute');page.bundle.addKey('dynamictree.collapse','Collapse');page.bundle.addKey('contextmenu.frame.title','Menu frame');page.bundle.addKey('dragdrop.accessible.complete.nochange','No ordering changes made.');page.bundle.addKey('yt.pause','Pause');page.bundle.addKey('coursemenu.hide','Hide Organization Menu');</script>
   <script type="text/javascript">
-
-	  // initPreviewDivs on window load rather than FastInit to wait until all the images are loaded
-      Event.observe(window,'load', function()
-      {
-    	  gradebook_utils.initPreviewDivs( 'studentGradesCommentPreview' );
-      });
-
-      
-      
-	</script>
-  
-  <script type="text/javascript">
-   var course_id = "_326159_1";
+   var course_id = "_51827_1";
    var confirmDeleteMenuItemMsg = "Are you sure you want to delete this item?";
-   var confirmQuickUnenrollMsg = "Any user data created while quick enrolled in this course will be deleted. Proceed?";
-   var confirmQuickEnrollMsg = "You will be given the role: Instructor. Proceed?";
+   var confirmQuickUnenrollMsg = "Any user data created while quick enrolled in this organization will be deleted. Proceed?";
+   var confirmQuickEnrollMsg = "You will be given the role: Leader. Proceed?";
    var inNewWindow = false;
    var theCourseMenu;
  </script>
@@ -437,7 +452,6 @@ _init_bundle_LOCALE_SETTINGS();
         try {DWREngine.beginBatch();} catch(ignore) {}
        } 
                 page.decoratePageBanner();
-                                                             new page.PageHelpToggler(true, 'Help is On: Click to hide page help.', 'Help is Off: Click to show page help.', false );
                                                              new page.PageMenuToggler(true,'courseMenuToggle');
                                                              new page.PaletteController('courseMenuPalette', 'courseMenu_link', false, false);
                                                              theCourseMenu = new courseMenu.CourseMenu('/webapps/blackboard/execute/doCourseMenuAction', '/webapps/blackboard/execute/getCourseMenuContextMenu');

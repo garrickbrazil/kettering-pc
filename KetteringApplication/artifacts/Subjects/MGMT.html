@@ -1,0 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<HTML lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="X-UA-Compatible" NAME="Cache-Control" CONTENT="IE=EmulateIE7">
+<LINK REL="stylesheet" HREF="/css/web_defaultmenu.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<link rel="stylesheet" type="text/css" href="/css/app-overrides.css"/>
+<link rel="stylesheet" type="text/css" href="/css/common-platform.css"/>
+<link rel="stylesheet" type="text/css" href="/css/common-controls.css"/>
+<LINK REL="stylesheet" type="text/css" href="/css/jquery/jquery.autocomplete.css" />
+<LINK REL="stylesheet" type="text/css" href="/css/cascade.css" />
+<!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 8]><link href="/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<LINK REL="stylesheet" type="text/css" href="/css/cascade-print.css" media="print" />
+<script type="text/javascript" src="/js/jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.includeMany-1.2.0.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.history.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery-ui-personalized-1.5.3.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="/js/jquery/json2xml.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.jsonp-2.1.3.min.js"></script>
+<script type="text/javascript" src="/js/serviceProperties.js"></script>
+<script type="text/javascript" src="/js/common-controls-min.js"></script>
+<script type="text/javascript" src="/js/common-integrate-min.js"></script>
+<script type="text/javascript" src="/js/common-navigation-min.js"></script>
+<script type="text/javascript" src="/js/common-platform-min.js"></script>
+<script type="text/javascript" src="/js/cascade-utils-min.js"></script>
+<script type="text/javascript" src="/js/cascade-controls-min.js"></script>
+<script type="text/javascript" src="/js/udcxml-service-min.js"></script>
+<script type="text/javascript" src="/js/cascade-parser-min.js"></script>
+<script type="text/javascript" src="/js/cascade-ext-min.js"></script>
+<TITLE>Class Schedule Listing</TITLE>
+<META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var level_depth = "0";
+var userDetails = "";
+var wcMessage = "";
+var locale_val = "AMERICAN_AMERICA";
+var locale_lang = "en_US";
+var help_width= "450";
+var help_height = "500";
+//  End script hiding -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div id="headerImage">
+<IMG SRC="/css/images/Banner_header_173x12.png" CLASS="headerImg" TITLE=""  NAME="banner_header_173x12" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=12 WIDTH=173>
+</div>
+<DIV class="headerwrapperdiv">
+<DIV class="pageheaderdiv1">
+<A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+</DIV>
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
+         WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<DIV class="headerlinksdiv2">
+&nbsp;
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<SPAN class="pageheaderlinks">
+<A HREF="/wtlhelp/twghhelp.htm" accesskey="H" onClick="popup = window.open('/wtlhelp/twghhelp.htm', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="pagetitlediv">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
+   WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<H2>Class Schedule Listing</H2>
+</TD>
+<TD CLASS="pldefault">
+&nbsp;
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<DIV class="staticheaders">
+Winter 2013<br>
+Dec 09, 2012<br>
+</div>
+</TD>
+</TR>
+<TR>
+<TD class="bg3" width="100%" colSpan=3><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD>
+</TR>
+</TABLE>
+<a name="main_content"></a>
+</DIV>
+<DIV class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<BR>
+
+<INPUT TYPE="hidden" NAME="sel_crn" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="ADD_BTN" VALUE="dummy">
+<TABLE  CLASS="datadisplaytable" SUMMARY="This layout table is used to present the sections found" width="100%"><CAPTION class="captiontext">Sections Found</CAPTION>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11440">Organizational Behavior - 11440 - MGMT 222 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=222&amp;sel_crse_end=222&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=222&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 10:05 am</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 4335</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Beverly J  Jones (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11263">Fundamentals of Supply Chain Management - 11263 - MGMT 469 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=469&amp;sel_crse_end=469&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=469&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 4309</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Lawrence J  Navarre (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:lnavarre@kettering.edu"    target="Lawrence J. Navarre" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11471">Project Management - 11471 - MGMT 546 - 01W</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Online course available to both A & B section students
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Mezzanine Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=546&amp;sel_crse_end=546&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=546&amp;p_seq_in=01W">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Lawrence J  Navarre (<ABBR title= "Primary">P</ABBR>)<A HREF="mailto:lnavarre@kettering.edu"    target="Lawrence J. Navarre" ><IMG SRC="/wtlgifs/web_email.gif" ALIGN="middle" ALT="E-mail" CLASS="headerImg" TITLE="E-mail"  NAME="web_email" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=28 WIDTH=28></A></TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10858">Managing People & Organization - 10858 - MGMT 639 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Previously taped course - media will be shipped to students
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=639&amp;sel_crse_end=639&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=639&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Beverly J  Jones (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11096">Strategy - 11096 - MGMT 659 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+Previously taped course - media will be shipped to students
+<BR>
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=659&amp;sel_crse_end=659&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=659&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Norman C  Irish (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11056">Leadership - 11056 - MGMT 679 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=679&amp;sel_crse_end=679&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=679&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:00 pm - 4:00 pm</TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Campus Center J</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Beverly J  Jones (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11810">Leadership - 11810 - MGMT 679 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Oct 15, 2012 to Jan 11, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Graduate, Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Graduate Course Site Campus
+<BR>
+Internet Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=MGMT&amp;sel_crse_strt=679&amp;sel_crse_end=679&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=MGMT&amp;p_crse_numb_in=679&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">R</TD>
+<TD CLASS="dddefault">Distance Learning Center </TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Internet</TD>
+<TD CLASS="dddefault">Beverly J  Jones (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<TABLE  CLASS="datadisplaytable" summary="This is for formatting of the bottom links." WIDTH="50%">
+<TR>
+<TD CLASS="ntdefault">
+<A HREF="javascript:history.go(-1)" onMouseOver="window.status='Return to Previous';  return true" onFocus="window.status='Return to Previous';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">Return to Previous</A>
+</TD>
+</TR>
+</TABLE>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<TABLE  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
+                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><TR><TD class="bgtabon" width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+<A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+</DIV>
+<DIV class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.5.1</SPAN>
+</DIV>
+<DIV class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+</BODY>
+</HTML>

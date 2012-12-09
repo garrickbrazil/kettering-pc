@@ -52,7 +52,7 @@ public class Menu {
 		printer.print(html);	    	
 		printer.close();
 		
-		System.out.println("Successfully stored menu to \"artifacts/menu.html\".");
+		System.out.println("Successfully stored \"menu.html\".");
 		
 		
 		Elements tables = Jsoup.parse(html).getElementsByTag("table");

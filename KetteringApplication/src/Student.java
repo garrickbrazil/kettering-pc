@@ -1,6 +1,8 @@
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -36,6 +38,7 @@ public class Student {
 	private List<MidtermGrade> midtermGrades;
 	private UndergradSummary undergradSummary;
 	private AccountTotal accountTotal;
+	private Map<Course, String> dynamicCourses;
 	
 	
 	/********************************************************************
@@ -53,6 +56,7 @@ public class Student {
 		this.currentGrades = new ArrayList<CurrentGrade>();
 		this.finalGrades = new ArrayList<FinalGrade>();
 		this.midtermGrades = new ArrayList<MidtermGrade>();
+		this.dynamicCourses = new HashMap<Course, String>();
 	}
 	
 	
@@ -74,6 +78,7 @@ public class Student {
 		this.currentGrades = new ArrayList<CurrentGrade>();
 		this.finalGrades = new ArrayList<FinalGrade>();
 		this.midtermGrades = new ArrayList<MidtermGrade>();
+		this.dynamicCourses = new HashMap<Course, String>();
 	}
 	
 	
@@ -91,6 +96,7 @@ public class Student {
 	public List<MidtermGrade> getMidtermGrades(){ return this.midtermGrades; }
 	public UndergradSummary getUndergradSummary(){ return this.undergradSummary; }
 	public AccountTotal getAccountTotal(){ return this.accountTotal; }
+	public Map<Course, String> getDynamicCourses(){ return this.dynamicCourses; }
 	
 	
 	
@@ -211,7 +217,7 @@ public class Student {
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored transcript to \"artifacts/transcript.html\".");
+			System.out.println("Successfully stored \"transcript.html\".");
 			
 			
 			this.transcript = html;
@@ -251,7 +257,7 @@ public class Student {
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored schedule to \"artifacts/schedule.html\".");
+			System.out.println("Successfully stored \"schedule.html\".");
 			
 		}
 		
@@ -279,7 +285,7 @@ public class Student {
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored grades to \"artifacts/grades.html\".");
+			System.out.println("Successfully stored \"grades.html\".");
 			
 			
 			// Class grades
@@ -298,11 +304,11 @@ public class Student {
 				String gradeHTML = HTMLParser.parse(gradeResponse);
 				
 				// Write to file
-				printer = new PrintWriter("artifacts/courseGradeDetail" + i + ".html");
+				printer = new PrintWriter("artifacts/Grade Details/gradeDetail" + i + ".html");
 				printer.print(gradeHTML);	    	
 				printer.close();
 				
-				System.out.println("Successfully stored \"artifacts/courseGradeDetail" + i + ".html\"");
+				System.out.println("Successfully stored \"gradeDetail" + i + ".html\"");
 				
 				// Create
 				this.currentGrades.add(new CurrentGrade(className, gradeHTML));
@@ -334,7 +340,7 @@ public class Student {
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored final grades to \"artifacts/finalgrades.html\"");
+			System.out.println("Successfully stored \"finalgrades.html\"");
 			
 			Elements tables = Jsoup.parse(html).getElementsByClass("datadisplaytable");
 			
@@ -380,7 +386,7 @@ public class Student {
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored midterm grades to \"artifacts/midtermgrades.html\"");
+			System.out.println("Successfully stored \"midtermgrades.html\"");
 			
 			Elements tables = Jsoup.parse(html).getElementsByClass("datadisplaytable");
 			
@@ -423,7 +429,7 @@ public class Student {
 			printer.print(html);	    	
 			printer.close();
 			
-			System.out.println("Successfully stored account total to \"artifacts/accountTotal.html\"");
+			System.out.println("Successfully stored \"accountTotal.html\"");
 			
 			
 			Elements elements = Jsoup.parse(html).getElementsByClass("datadisplaytable");
@@ -431,6 +437,47 @@ public class Student {
 			// Set account info
 			if(elements.size() > 0 && elements.get(0).getElementsByTag("tbody").size() > 0){ this.accountTotal = new AccountTotal(elements.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr")); }
 			
+		}
+		
+		catch(Exception e){ e.printStackTrace(); }
+		
+	}
+	
+	
+	/********************************************************************
+	 * Method: storeDynamicCourses()
+	 * Purpose: store financial account information to memory
+	/*******************************************************************/
+	public void storeDynamicCourses(int term){
+		
+		try {
+			
+			String begin = "https://jweb.kettering.edu/cku1/bwckschd.p_get_crse_unsec?term_in=" + term + "&sel_subj=dummy&sel_day=dummy&sel_schd=dummy&sel_insm=dummy&sel_camp=dummy&sel_levl=dummy&sel_sess=dummy&sel_instr=dummy&sel_ptrm=dummy&sel_attr=dummy&sel_subj=";
+			String end = "&sel_crse=&sel_title=&sel_from_cred=&sel_to_cred=&sel_instr=%25&begin_hh=0&begin_mi=0&begin_ap=0&end_hh=0&end_mi=0&end_ap=a";
+			
+			DefaultHttpClient client = new DefaultHttpClient();
+			
+			// 32 Subjects
+			List<String> subjects = new ArrayList<String>();
+			subjects.add("ACCT"); subjects.add("BIOL"); subjects.add("BUSN"); subjects.add("CHME"); subjects.add("CHEM"); subjects.add("CHN"); subjects.add("COMM"); subjects.add("CE"); subjects.add("CS"); subjects.add("ECON"); subjects.add("ECE"); subjects.add("EE"); subjects.add("ESL"); subjects.add("FINC"); subjects.add("GER"); subjects.add("HMGT"); subjects.add("HIST"); subjects.add("HUMN"); subjects.add("IME"); subjects.add("ISYS"); subjects.add("MFGO"); subjects.add("LS"); subjects.add("LIT"); subjects.add("MGMT"); subjects.add("MRKT"); subjects.add("MATH"); subjects.add("MECH"); subjects.add("MEDI"); subjects.add("ORTN"); subjects.add("PHIL"); subjects.add("PHYS"); subjects.add("SSCI"); subjects.add("SOC");
+			
+			
+			for(int i = 0; i < subjects.size(); i++){
+			
+				// Connect
+				HttpGet dynamicGet = new HttpGet(begin + subjects.get(i) + end);
+				HttpResponse response = client.execute(dynamicGet);
+				
+				String html = HTMLParser.parse(response);
+				
+				// Write to file
+				PrintWriter printer = new PrintWriter("artifacts/Subjects/" + subjects.get(i) + ".html");
+				printer.print(html);	    	
+				printer.close();
+				
+				System.out.println("Successfully stored \"" + subjects.get(i) + ".html\"");
+				
+			}
 			
 		}
 		

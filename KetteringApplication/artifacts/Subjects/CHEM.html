@@ -1,0 +1,2049 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<HTML lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="X-UA-Compatible" NAME="Cache-Control" CONTENT="IE=EmulateIE7">
+<LINK REL="stylesheet" HREF="/css/web_defaultmenu.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<link rel="stylesheet" type="text/css" href="/css/app-overrides.css"/>
+<link rel="stylesheet" type="text/css" href="/css/common-platform.css"/>
+<link rel="stylesheet" type="text/css" href="/css/common-controls.css"/>
+<LINK REL="stylesheet" type="text/css" href="/css/jquery/jquery.autocomplete.css" />
+<LINK REL="stylesheet" type="text/css" href="/css/cascade.css" />
+<!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 8]><link href="/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<LINK REL="stylesheet" type="text/css" href="/css/cascade-print.css" media="print" />
+<script type="text/javascript" src="/js/jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.includeMany-1.2.0.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.history.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery-ui-personalized-1.5.3.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="/js/jquery/json2xml.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.jsonp-2.1.3.min.js"></script>
+<script type="text/javascript" src="/js/serviceProperties.js"></script>
+<script type="text/javascript" src="/js/common-controls-min.js"></script>
+<script type="text/javascript" src="/js/common-integrate-min.js"></script>
+<script type="text/javascript" src="/js/common-navigation-min.js"></script>
+<script type="text/javascript" src="/js/common-platform-min.js"></script>
+<script type="text/javascript" src="/js/cascade-utils-min.js"></script>
+<script type="text/javascript" src="/js/cascade-controls-min.js"></script>
+<script type="text/javascript" src="/js/udcxml-service-min.js"></script>
+<script type="text/javascript" src="/js/cascade-parser-min.js"></script>
+<script type="text/javascript" src="/js/cascade-ext-min.js"></script>
+<TITLE>Class Schedule Listing</TITLE>
+<META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+var level_depth = "0";
+var userDetails = "";
+var wcMessage = "";
+var locale_val = "AMERICAN_AMERICA";
+var locale_lang = "en_US";
+var help_width= "450";
+var help_height = "500";
+//  End script hiding -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div id="headerImage">
+<IMG SRC="/css/images/Banner_header_173x12.png" CLASS="headerImg" TITLE=""  NAME="banner_header_173x12" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=12 WIDTH=173>
+</div>
+<DIV class="headerwrapperdiv">
+<DIV class="pageheaderdiv1">
+<A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+</DIV>
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
+         WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<DIV class="headerlinksdiv2">
+&nbsp;
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<SPAN class="pageheaderlinks">
+<A HREF="/wtlhelp/twghhelp.htm" accesskey="H" onClick="popup = window.open('/wtlhelp/twghhelp.htm', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="pagetitlediv">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
+   WIDTH="100%">
+<TR>
+<TD CLASS="pldefault">
+<H2>Class Schedule Listing</H2>
+</TD>
+<TD CLASS="pldefault">
+&nbsp;
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext"></p>
+<DIV class="staticheaders">
+Winter 2013<br>
+Dec 09, 2012<br>
+</div>
+</TD>
+</TR>
+<TR>
+<TD class="bg3" width="100%" colSpan=3><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD>
+</TR>
+</TABLE>
+<a name="main_content"></a>
+</DIV>
+<DIV class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<BR>
+
+<INPUT TYPE="hidden" NAME="sel_crn" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="dummy">
+<INPUT TYPE="hidden" NAME="ADD_BTN" VALUE="dummy">
+<TABLE  CLASS="datadisplaytable" SUMMARY="This layout table is used to present the sections found" width="100%"><CAPTION class="captiontext">Sections Found</CAPTION>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11520">Principles of Chemistry  -PE- - 11520 - CHEM 135 - 99</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       3.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=135&amp;sel_crse_end=135&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=135&amp;p_seq_in=99">Kettering Bookstore</A>
+<BR>
+<BR>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11521">Principles of Chem Lab  -PE- - 11521 - CHEM 136 - 99</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=136&amp;sel_crse_end=136&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=136&amp;p_seq_in=99">Kettering Bookstore</A>
+<BR>
+<BR>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10666">Industrial Organic Chemistry - 10666 - CHEM 145 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       3.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=145&amp;sel_crse_end=145&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=145&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">2:25 pm - 3:30 pm</TD>
+<TD CLASS="dddefault">MWF</TD>
+<TD CLASS="dddefault">Academic Building 2225</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10672">Industrial Organic Chem Lab - 10672 - CHEM 146 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=146&amp;sel_crse_end=146&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=146&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">T</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3121</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">T</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3112</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10685">Introduction to Polymer Science - 10685 - CHEM 223 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=223&amp;sel_crse_end=223&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=223&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">Academic Building 2911</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">G. Reginald   Bell (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11925">Introduction to Polymer Science - 11925 - CHEM 223 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=223&amp;sel_crse_end=223&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=223&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">3:35 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">Academic Building 2911</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">G. Reginald   Bell (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10976">General Chemistry II - 10976 - CHEM 237 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       3.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=237&amp;sel_crse_end=237&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=237&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">TF</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3225</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Andrzej   Przyjazny (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10677">General Chemistry II Lab - 10677 - CHEM 238 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=238&amp;sel_crse_end=238&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=238&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">9:05 am - 12:20 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3131</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">9:05 am - 12:20 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3112</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11063">General Chemistry II Lab - 11063 - CHEM 238 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       1.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=238&amp;sel_crse_end=238&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=238&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 4:35 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3131</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Andrzej   Przyjazny (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 4:35 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3112</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Andrzej   Przyjazny (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11421">Survey of Organic Chemistry - 11421 - CHEM 247 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=247&amp;sel_crse_end=247&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=247&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3222</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Robert M  McAllister (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11121">Organic Chemistry II - 11121 - CHEM 347 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=347&amp;sel_crse_end=347&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=347&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">10:15 am - 12:20 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3222</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ali   Zand (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11122">Organic Chemistry II Lab - 11122 - CHEM 348 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=348&amp;sel_crse_end=348&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=348&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 12:20 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3141</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Ali   Zand (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">8:00 am - 12:20 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3222</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Ali   Zand (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11286">Biochemistry II - 11286 - CHEM 451 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       4.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=451&amp;sel_crse_end=451&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=451&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 3:25 pm</TD>
+<TD CLASS="dddefault">MR</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3225</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Jennifer L  Aurandt (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=10975">Biochemistry II Lab - 10975 - CHEM 452 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=452&amp;sel_crse_end=452&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=452&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3231</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Jennifer L  Aurandt (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault">1:20 pm - 5:40 pm</TD>
+<TD CLASS="dddefault">W</TD>
+<TD CLASS="dddefault">CS Mott Engrn & Science Center 3225</TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Jennifer L  Aurandt (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11169">Senior Research/Seminar I - 11169 - CHEM 494 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Jennifer L  Aurandt (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11235">Senior Research/Seminar I - 11235 - CHEM 494 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Lisandro   Hernandez de la Pena (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11236">Senior Research/Seminar I - 11236 - CHEM 494 - 03</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=03">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Robert M  McAllister (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11237">Senior Research/Seminar I - 11237 - CHEM 494 - 04</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=04">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11238">Senior Research/Seminar I - 11238 - CHEM 494 - 05</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=05">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Andrzej   Przyjazny (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11239">Senior Research/Seminar I - 11239 - CHEM 494 - 06</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=06">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Stacy K  Seeley (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11240">Senior Research/Seminar I - 11240 - CHEM 494 - 07</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=07">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Montserrat   Rabago-Smith (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11241">Senior Research/Seminar I - 11241 - CHEM 494 - 08</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=08">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Lihua   Wang (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11242">Senior Research/Seminar I - 11242 - CHEM 494 - 09</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=09">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Ali   Zand (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11428">Senior Research/Seminar I - 11428 - CHEM 494 - 10</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=10">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Susan A  Farhat (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11429">Senior Research/Seminar I - 11429 - CHEM 494 - 11</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=11">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Mary A  Gilliam (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11430">Senior Research/Seminar I - 11430 - CHEM 494 - 12</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=12">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Steven Robert  Nartker (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11431">Senior Research/Seminar I - 11431 - CHEM 494 - 13</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lecture Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=494&amp;sel_crse_end=494&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=494&amp;p_seq_in=13">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lecture</TD>
+<TD CLASS="dddefault">Jonathan E  Wenzel (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11170">Senior Research/Seminar II - 11170 - CHEM 496 - 01</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=01">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Jennifer L  Aurandt (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11243">Senior Research/Seminar II - 11243 - CHEM 496 - 02</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=02">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Lisandro   Hernandez de la Pena (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11244">Senior Research/Seminar II - 11244 - CHEM 496 - 03</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=03">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Robert M  McAllister (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11245">Senior Research/Seminar II - 11245 - CHEM 496 - 04</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=04">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Diana A  Phillips (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11246">Senior Research/Seminar II - 11246 - CHEM 496 - 05</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=05">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Andrzej   Przyjazny (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11247">Senior Research/Seminar II - 11247 - CHEM 496 - 06</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=06">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Stacy K  Seeley (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11248">Senior Research/Seminar II - 11248 - CHEM 496 - 07</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=07">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Montserrat   Rabago-Smith (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11249">Senior Research/Seminar II - 11249 - CHEM 496 - 08</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=08">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Lihua   Wang (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11250">Senior Research/Seminar II - 11250 - CHEM 496 - 09</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=09">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Ali   Zand (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11432">Senior Research/Seminar II - 11432 - CHEM 496 - 10</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=10">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Susan A  Farhat (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11433">Senior Research/Seminar II - 11433 - CHEM 496 - 11</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=11">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Mary A  Gilliam (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11434">Senior Research/Seminar II - 11434 - CHEM 496 - 12</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=12">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Steven Robert  Nartker (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+<TR>
+<TH CLASS="ddtitle" scope="colgroup" ><A HREF="/cku1/bwckschd.p_disp_detail_sched?term_in=201301&amp;crn_in=11435">Senior Research/Seminar II - 11435 - CHEM 496 - 13</A></TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">
+<SPAN class="fieldlabeltext">Associated Term: </SPAN>Winter 2013 
+<BR>
+<SPAN class="fieldlabeltext">Registration Dates: </SPAN>Aug 27, 2012 to Jan 08, 2013 
+<BR>
+<SPAN class="fieldlabeltext">Levels: </SPAN>Non Degree-Undergraduate, Non Degree-Graduate, Undergraduate 
+<BR>
+<BR>
+Main Campus Campus
+<BR>
+Lab Schedule Type
+<BR>
+       2.000 Credits
+<BR>
+<A HREF="/cku1/bwckctlg.p_display_courses?term_in=201301&amp;one_subj=CHEM&amp;sel_crse_strt=496&amp;sel_crse_end=496&amp;sel_subj=&amp;sel_levl=&amp;sel_schd=&amp;sel_coll=&amp;sel_divs=&amp;sel_dept=&amp;sel_attr=">View Catalog Entry</A>
+<BR>
+<A HREF="/cku1/bwckbook.site?p_term_in=201301&amp;p_subj_in=CHEM&amp;p_crse_numb_in=496&amp;p_seq_in=13">Kettering Bookstore</A>
+<BR>
+<BR>
+<TABLE  CLASS="datadisplaytable" SUMMARY="This table lists the scheduled meeting times and assigned instructors for this class.."><CAPTION class="captiontext">Scheduled Meeting Times</CAPTION>
+<TR>
+<TH CLASS="ddheader" scope="col" >Type</TH>
+<TH CLASS="ddheader" scope="col" >Time</TH>
+<TH CLASS="ddheader" scope="col" >Days</TH>
+<TH CLASS="ddheader" scope="col" >Where</TH>
+<TH CLASS="ddheader" scope="col" >Date Range</TH>
+<TH CLASS="ddheader" scope="col" >Schedule Type</TH>
+<TH CLASS="ddheader" scope="col" >Instructors</TH>
+</TR>
+<TR>
+<TD CLASS="dddefault">Class</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">&nbsp;</TD>
+<TD CLASS="dddefault"><ABBR title = "To Be Announced">TBA</ABBR></TD>
+<TD CLASS="dddefault">Jan 07, 2013 - Mar 23, 2013</TD>
+<TD CLASS="dddefault">Lab</TD>
+<TD CLASS="dddefault">Jonathan E  Wenzel (<ABBR title= "Primary">P</ABBR>)</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<TABLE  CLASS="datadisplaytable" summary="This is for formatting of the bottom links." WIDTH="50%">
+<TR>
+<TD CLASS="ntdefault">
+<A HREF="javascript:history.go(-1)" onMouseOver="window.status='Return to Previous';  return true" onFocus="window.status='Return to Previous';  return true" onMouseOut="window.status='';  return true"onBlur="window.status='';  return true">Return to Previous</A>
+</TD>
+</TR>
+</TABLE>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<TABLE  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
+                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><TR><TD class="bgtabon" width="100%" colSpan=2><IMG SRC="/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+<A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+</DIV>
+<DIV class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.5.1</SPAN>
+</DIV>
+<DIV class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+</BODY>
+</HTML>
