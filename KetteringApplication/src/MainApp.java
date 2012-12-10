@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import org.apache.commons.codec.EncoderException;
 import org.apache.http.client.ClientProtocolException;
@@ -19,7 +22,8 @@ public class MainApp {
 		Scanner input = new Scanner(System.in);
 		Student user = new Student();
 		Directory dir = new Directory();
-				
+		DynamicCourses dyno = new DynamicCourses();
+		
 		
 		System.out.println("\n========== Directory ==========\n");
 
@@ -60,9 +64,8 @@ public class MainApp {
 		user.storeCurrentGrades();
 		user.storeTranscript();
 		user.storeAccount();
-		user.storeDynamicCourses(201301);
+		dyno.storeDynamicCourses(201301);
 
-		
 		
 		System.out.println("\n\n========== Menu ==========\n");
 		System.out.println(menu.toString());
@@ -85,25 +88,61 @@ public class MainApp {
 		System.out.println(user.getAccountTotal().toString());
 		
 		
-		System.out.println("\n\n========== Course Scheduler Demo for Math 102, Mech 100, and CS 101 ==========\n");
+		System.out.println("\n\n========== Course Scheduler Valid Choices==========\n");
 		
 		// Demo courses
 		List<String> givenIDs = new ArrayList<String>();
-		givenIDs.add("MECH 100");
-		givenIDs.add("MATH 102");
-		givenIDs.add("CS 101");
+		String schedulerResponse = "";
 		
-		// Execute
-		List<List<Course>> results = user.getClassOptions(givenIDs);
+		while(!schedulerResponse.equals("2")){
+			
+			if(givenIDs.size() > 0) givenIDs = new ArrayList<String>();
+			
+			// Course choices
+			int factor = 0;
+			for (String str : dyno.getDynamicCourseIDs()){
+				if (factor == 6){ System.out.println(str + "\u00A0\u00A0\u00A0\u00A0\t"); factor = 0; }
+				else{ System.out.print(str + "\u00A0\u00A0\u00A0\u00A0\t"); factor++; }
+			}
+			
+			
+			String inputStr = "";
+			System.out.println("\n\nPlease enter in courses you wish to add and then choose done.");
+			while(!inputStr.equals("3")){
+				
+				System.out.println("\n1. Add course");
+				System.out.println("2. See current");
+				System.out.println("3. Done");
+				
+				inputStr = input.nextLine();
+				
+				if(inputStr.equals("1")){
+					System.out.print("\nCourse: ");
+					givenIDs.add(input.nextLine());	
+				}
+				
+				else if(inputStr.equals("2")){
+					System.out.print("\nCourses added: ");
+					for(String course : givenIDs){
+						System.out.print(course + "\t");
+					}
+				}
+			}
+			
+			// Execute
+			dyno.setClassOptions(givenIDs);
+			
+			
+			// Print results
+			System.out.println("\n" + dyno.getWorkingSchedules().size() + " " + ((dyno.getWorkingSchedules().size()==1)?"option.":"options."));
+			for(List<Course> i : dyno.getWorkingSchedules()){
+				for(int j = 0; j < i.size(); j++) System.out.print(i.get(j).getCourseID() + "-" + i.get(j).getSection() + " ");
+				System.out.println();
+			}
 		
-		
-		// Print results
-		System.out.println(results.size() + " " + ((results.size()==1)?"option.":"options."));
-		for(List<Course> i : results){
-			for(int j = 0; j < i.size(); j++) System.out.print(i.get(j).getCourseID() + "-" + i.get(j).getSection() + " ");
-			System.out.println();
+			System.out.println("\n\n1. Go again\n2. Exit");
+			schedulerResponse = input.nextLine();
 		}
-		
 		
 		input.close();
 		
