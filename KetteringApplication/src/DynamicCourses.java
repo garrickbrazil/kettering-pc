@@ -88,16 +88,16 @@ public class DynamicCourses {
 				if(mainContainer.size() > 0 && mainContainer.get(0).getElementsByTag("tbody").size() > 0){
 				
 					
-					Elements coursesOffered = mainContainer.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr");
+					Elements coursesOffered = mainContainer.get(0).getElementsByTag("tbody").get(0).children();
 					
 					// Regular expression to get credits (no HTML consistency)
 					Pattern p = Pattern.compile("^.+([0-9].[0-9][0-9][0-9])\\sCredits.*");
 					
-					for (int j = 0; j < coursesOffered.size()/4; j++) {
+					for (int j = 0; j < coursesOffered.size()/2; j++) {
 						
 						// New course
 						Course currentCourse = new Course();
-						String[] courseTitle = coursesOffered.get(j*4).text().split("\\s[-]\\s");
+						String[] courseTitle = coursesOffered.get(j*2).text().split("\\s[-]\\s");
 						
 						
 						// Properties
@@ -105,7 +105,7 @@ public class DynamicCourses {
 						double credits; int crn;
 						
 
-						if (courseTitle.length >= 4 && coursesOffered.get(j*4+1).getElementsByTag("td").size() >= 8 && coursesOffered.get(j*4+1).getElementsByTag("td").get(0).text().split("\\d.\\d\\d\\d\\sCredits").length >= 2){
+						if (courseTitle.length >= 4 && coursesOffered.get(j*2+1).getElementsByTag("td").size() >= 8 && coursesOffered.get(j*2+1).getElementsByTag("td").get(0).text().split("\\d.\\d\\d\\d\\sCredits").length >= 2){
 							
 							// Title info
 							courseName = courseTitle[0];
@@ -148,14 +148,14 @@ public class DynamicCourses {
 							
 							
 							// Credits
-							Matcher m = p.matcher(coursesOffered.get(j*4+1).getElementsByTag("td").get(0).text());
+							Matcher m = p.matcher(coursesOffered.get(j*2+1).getElementsByTag("td").get(0).text());
 							credits = 0;
 							
 							while(m.find()){
 								try{ credits = Double.parseDouble(m.group(1)); }
 								catch(Exception e){ credits = 0; }
 							}
-							Elements timeInfo = coursesOffered.get(j*4 + 1).getElementsByTag("td");
+							Elements timeInfo = coursesOffered.get(j*2 + 1).getElementsByTag("td");
 							
 							
 							// Remove headers

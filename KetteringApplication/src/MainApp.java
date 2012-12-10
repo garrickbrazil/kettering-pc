@@ -1,9 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 import org.apache.commons.codec.EncoderException;
 import org.apache.http.client.ClientProtocolException;
@@ -118,7 +115,9 @@ public class MainApp {
 				
 				if(inputStr.equals("1")){
 					System.out.print("\nCourse: ");
-					givenIDs.add(input.nextLine());	
+					String key = input.nextLine().toUpperCase();
+					if(dyno.getDynamicCourses().get(key) != null) givenIDs.add(key);
+					else System.out.println("Invalid ID");
 				}
 				
 				else if(inputStr.equals("2")){
