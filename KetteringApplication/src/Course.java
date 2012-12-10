@@ -10,6 +10,8 @@ public class Course {
 	
 	// Properties
 	private String courseName;
+	private String courseID;
+	private String section;
 	private String instructor;
 	private String location;
 	private String dateRange;
@@ -17,6 +19,27 @@ public class Course {
 	private String days;
 	private double credits;
 	private int crn;
+	
+	
+	/********************************************************************
+	 * Constructor: Course
+	 * Purpose: creates a course with blank information
+	/*******************************************************************/
+	public Course(){
+		
+		// Defaults
+		this.courseName = "";
+		this.courseID = "";
+		this.section = "";
+		this.crn = 0;
+		this.instructor = "";
+		this.credits = 0;
+		this.time = "";
+		this.days = "";
+		this.location = "";
+		this.dateRange = "";
+		
+	}
 	
 
 	/********************************************************************
@@ -31,19 +54,44 @@ public class Course {
 		Elements courseInfo = course.getElementsByTag("td");
 		Elements timeInfo = times.getElementsByTag("td");
 		
-		// Course info
-		this.courseName = course.getElementsByClass("captiontext").get(0).text();
-		this.crn = Integer.parseInt(courseInfo.get(1).text());
-		this.instructor = courseInfo.get(3).text();
-		this.credits = Double.parseDouble(courseInfo.get(5).text());
+		if(courseInfo.size() > 0 && timeInfo.size() > 0 && course.getElementsByClass("captiontext").size() > 0 && course.getElementsByClass("captiontext").get(0).text().split("\\s[-]\\s").length >= 3){
+			
+			String[] courseTitle = course.getElementsByClass("captiontext").get(0).text().split("\\s[-]\\s");
+				
+			// Title info
+			this.courseName = courseTitle[0];
+			this.courseID = courseTitle[1];
+			this.section = courseTitle[2];
+			
+			// Course info
+			this.crn = Integer.parseInt(courseInfo.get(1).text());
+			this.instructor = courseInfo.get(3).text();
+			this.credits = Double.parseDouble(courseInfo.get(5).text());
+			
+			// Course times
+			this.time = timeInfo.get(1).text();
+			this.days = timeInfo.get(2).text();
+			this.location = timeInfo.get(3).text();
+			this.dateRange = timeInfo.get(4).text();
+		}
 		
-		// Course times
-		this.time = timeInfo.get(1).text();
-		this.days = timeInfo.get(2).text();
-		this.location = timeInfo.get(3).text();
-		this.dateRange = timeInfo.get(4).text();
+		// Wrong format
+		else {
+			
+			// Defaults
+			this.courseName = "";
+			this.courseID = "";
+			this.section = "";
+			this.crn = 0;
+			this.instructor = "";
+			this.credits = 0;
+			this.time = "";
+			this.days = "";
+			this.location = "";
+			this.dateRange = "";
+		}
+		
 	}
-	
 	
 	/********************************************************************
 	 * Accessors: getCourseName(), getCRN(), getInstructor(), getCredits()
@@ -51,6 +99,8 @@ public class Course {
 	 * Purpose: get the corresponding data
 	/*******************************************************************/
 	public String getCourseName(){ return this.courseName; }
+	public String getCourseID(){ return this.courseID; }
+	public String getSection(){ return this.section; }
 	public String getInstructor(){ return this.instructor; }
 	public String getLocation() { return this.location; }
 	public String getDateRange() { return this.dateRange; }
@@ -58,6 +108,7 @@ public class Course {
 	public String getDays() { return this.days; }
 	public double getCredits(){ return this.credits; }
 	public int getCRN(){ return this.crn; }
+	
 	
 	
 	/********************************************************************
@@ -73,7 +124,8 @@ public class Course {
 	public void setDays(String days) { this.days = days; }
 	public void setCredits(double credits){ this.credits = credits; }
 	public void setCRN(int crn){ this.crn = crn; }
-	
+	public void setCourseID(String courseID){ this.courseID = courseID; }
+	public void setSection(String section){ this.section = section; }
 	
 	
 	/********************************************************************
@@ -85,15 +137,16 @@ public class Course {
 	public String toString(){
 		
 		String courseInfo = "";
-		courseInfo += "Information\n";
-		courseInfo += "\n\tClass name: " + this.courseName;
-		courseInfo += "\n\tcrn: " + this.crn;
-		courseInfo += "\n\tInstructor: " + this.instructor;
-		courseInfo += "\n\tCredits: " + this.credits;
-		courseInfo += "\n\tMeeting Time: " + this.time;
-		courseInfo += "\n\tDays: " + this.days;
-		courseInfo += "\n\tLocation: " + this.location;
-		courseInfo += "\n\tDate range: " + this.dateRange;
+		courseInfo += "Class name: " + this.courseName;
+		courseInfo += "\nCourse ID: " + this.courseID;
+		courseInfo += "\nCourse Section: " + this.section;
+		courseInfo += "\ncrn: " + this.crn;
+		courseInfo += "\nInstructor: " + this.instructor;
+		courseInfo += "\nCredits: " + this.credits;
+		courseInfo += "\nMeeting Time: " + this.time;
+		courseInfo += "\nDays: " + this.days;
+		courseInfo += "\nLocation: " + this.location;
+		courseInfo += "\nDate range: " + this.dateRange;
 		
 		return courseInfo;
 		

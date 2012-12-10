@@ -1,8 +1,11 @@
 import java.io.PrintWriter;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -38,7 +41,7 @@ public class Student {
 	private List<MidtermGrade> midtermGrades;
 	private UndergradSummary undergradSummary;
 	private AccountTotal accountTotal;
-	private Map<Course, String> dynamicCourses;
+	private Map<String, List<Course>> dynamicCourses;
 	
 	
 	/********************************************************************
@@ -56,7 +59,7 @@ public class Student {
 		this.currentGrades = new ArrayList<CurrentGrade>();
 		this.finalGrades = new ArrayList<FinalGrade>();
 		this.midtermGrades = new ArrayList<MidtermGrade>();
-		this.dynamicCourses = new HashMap<Course, String>();
+		this.dynamicCourses = new HashMap<String, List<Course>>();
 	}
 	
 	
@@ -78,7 +81,7 @@ public class Student {
 		this.currentGrades = new ArrayList<CurrentGrade>();
 		this.finalGrades = new ArrayList<FinalGrade>();
 		this.midtermGrades = new ArrayList<MidtermGrade>();
-		this.dynamicCourses = new HashMap<Course, String>();
+		this.dynamicCourses = new HashMap<String, List<Course>>();
 	}
 	
 	
@@ -96,7 +99,7 @@ public class Student {
 	public List<MidtermGrade> getMidtermGrades(){ return this.midtermGrades; }
 	public UndergradSummary getUndergradSummary(){ return this.undergradSummary; }
 	public AccountTotal getAccountTotal(){ return this.accountTotal; }
-	public Map<Course, String> getDynamicCourses(){ return this.dynamicCourses; }
+	public Map<String, List<Course>> getDynamicCourses(){ return this.dynamicCourses; }
 	
 	
 	
@@ -180,6 +183,7 @@ public class Student {
 	        parameters.add(new BasicNameValuePair("encoded_pw_unicode", ""));
 	        login.setEntity(new UrlEncodedFormEntity(parameters));
 			
+	        
 			// Initial load
 	        HttpResponse response = this.clientBlackboard.execute(initialLoad);
 	        HttpEntity entity = response.getEntity();
@@ -452,10 +456,11 @@ public class Student {
 		
 		try {
 			
+			DefaultHttpClient client = new DefaultHttpClient();
+			
+			// URLs
 			String begin = "https://jweb.kettering.edu/cku1/bwckschd.p_get_crse_unsec?term_in=" + term + "&sel_subj=dummy&sel_day=dummy&sel_schd=dummy&sel_insm=dummy&sel_camp=dummy&sel_levl=dummy&sel_sess=dummy&sel_instr=dummy&sel_ptrm=dummy&sel_attr=dummy&sel_subj=";
 			String end = "&sel_crse=&sel_title=&sel_from_cred=&sel_to_cred=&sel_instr=%25&begin_hh=0&begin_mi=0&begin_ap=0&end_hh=0&end_mi=0&end_ap=a";
-			
-			DefaultHttpClient client = new DefaultHttpClient();
 			
 			// 32 Subjects
 			List<String> subjects = new ArrayList<String>();
@@ -477,6 +482,92 @@ public class Student {
 				
 				System.out.println("Successfully stored \"" + subjects.get(i) + ".html\"");
 				
+				Elements displayTable = Jsoup.parse(html).getElementsByClass("datadisplaytable");
+				
+				// Correct format ?
+				if(displayTable.size() > 0 && displayTable.get(0).getElementsByTag("tbody").size() > 0){
+				
+					
+					Elements coursesOffered = displayTable.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr");
+					
+					// Regex to get credits (no HTML consistency)
+					Pattern p = Pattern.compile("^.+([0-9].[0-9][0-9][0-9])\\sCredits.*");
+					
+					for (int j = 0; j < coursesOffered.size()/4; j++) {
+						
+						Course currentCourse = new Course();
+						
+						// Properties
+						String courseName;
+						String courseID;
+						String section;
+						String instructor;
+						String location;
+						String dateRange;
+						String time;
+						String days;
+						double credits;
+						int crn;
+						
+						String[] courseTitle = coursesOffered.get(j*4).text().split("\\s[-]\\s");
+						
+						// Correct format ?
+						if (courseTitle.length >= 4 && coursesOffered.get(j*4+1).getElementsByTag("td").size() >= 8 && coursesOffered.get(j*4+1).getElementsByTag("td").get(0).text().split("\\d.\\d\\d\\d\\sCredits").length >= 2){
+							
+							// Title info
+							courseName = courseTitle[0];
+							try{ crn = Integer.parseInt(courseTitle[1]); }
+							catch(Exception e){ crn = 0; }
+							courseID = courseTitle[2];
+							section = courseTitle[3];
+							
+							// Regex
+							Matcher m = p.matcher(coursesOffered.get(j*4+1).getElementsByTag("td").get(0).text());
+
+							if (m.find()){  
+								
+								try{ credits = Double.parseDouble(m.group(1)); }
+								catch(Exception e){ credits = 0; }
+							}
+							
+							else credits = 0;
+							
+							Elements times = coursesOffered.get(j*4 + 1).getElementsByTag("td");
+							
+							// Not needed
+							times.remove(0); times.remove(0);
+							
+							time = times.get(0).text();
+							days = times.get(1).text();
+							location = times.get(2).text();
+							dateRange = times.get(3).text();
+							instructor = times.get(5).text();
+							
+							currentCourse.setCourseName(courseName);
+							currentCourse.setCourseID(courseID);
+							currentCourse.setCredits(credits);
+							currentCourse.setCRN(crn);
+							currentCourse.setDateRange(dateRange);
+							currentCourse.setDays(days);
+							currentCourse.setInstructor(instructor);
+							currentCourse.setLocation(location);
+							currentCourse.setSection(section);
+							currentCourse.setTime(time);
+							
+							if(this.dynamicCourses.get(courseID) == null){
+								List<Course> newList = new ArrayList<Course>();
+								newList.add(currentCourse);
+								this.dynamicCourses.put(courseID, newList);
+							}
+							
+							else this.dynamicCourses.get(courseID).add(currentCourse);
+							
+						}
+					
+					}
+					
+				}
+				
 			}
 			
 		}
@@ -485,5 +576,217 @@ public class Student {
 		
 	}
 	
+	
+	/********************************************************************
+	 * Method: perm
+	 * Purpose: goes through all possible outcomes of a class set
+	/*******************************************************************/
+	public void perm(String print, List<List<Course>> sets, int pos, List<String> result, List<List<Course>> workingCourses) {
+	    
+		// Base case
+		if (pos == sets.size()) {
+	        result.add(print);
+	        String[] mycourses = print.split("pos=");
+	        
+	        List<Course> newList = new ArrayList<Course>();
+	        
+	        for(int l = 1; l < mycourses.length; l++){
+	        
+	        	int position = Integer.parseInt(mycourses[l].split("\\si=")[0]);
+	        	int index = Integer.parseInt(mycourses[l].split("\\si=")[1]);
+	        	
+	        	newList.add(sets.get(position).get(index));
+	        	
+	        }
+	        if(this.testClasses(newList)) workingCourses.add(newList);
+	    } 
+	    
+	    else {
+	    	for (int i = 0; i < sets.get(pos).size(); i++) {
+	    		
+	            perm(print + "pos=" + pos + " i=" + i, sets, pos + 1, result, workingCourses);
+	        }
+	    }		
+	}
+	
+	
+	/********************************************************************
+	 * Method: getClassOptions
+	 * Purpose: gets all working class options with given class ID's
+	/*******************************************************************/
+	public List<List<Course>> getClassOptions(List<String> givenIDs){
+		
+		List<List<Course>> comb = new ArrayList<List<Course>>();
+		List<List<Course>> results = new ArrayList<List<Course>>();
+		List<String> stringResults = new ArrayList<String>();
+		
+		for(String givenID : givenIDs){
+			List<Course> set = this.dynamicCourses.get(givenID);
+			if(set == null) return results;
+			
+			comb.add(set);
+		}
+		
+		this.perm("", comb, 0, stringResults, results);
+	
+		return results;
+	}
+	
+	
+	
+	/********************************************************************
+	 * Method: testClasses
+	 * Purpose: tests if classes work together
+	/*******************************************************************/
+	public boolean testClasses(List<Course> courses){
+		
+		List<TimeBlock> Monday = new ArrayList<TimeBlock>();
+		List<TimeBlock> Tuesday = new ArrayList<TimeBlock>();
+		List<TimeBlock> Wednesday = new ArrayList<TimeBlock>();
+		List<TimeBlock> Thursday = new ArrayList<TimeBlock>();
+		List<TimeBlock> Friday = new ArrayList<TimeBlock>();
+		
+		if(courses.size() <= 0) return false;
+		
+		for(Course current : courses){
+			
+			boolean m = current.getDays().contains("M");
+			boolean t = current.getDays().contains("T");
+			boolean w = current.getDays().contains("W");
+			boolean r = current.getDays().contains("R");
+			boolean f = current.getDays().contains("F");
+			
+			
+			String startStr;
+			String endStr;
+			int startHours;
+			int startMinutes;
+			int endHours;
+			int endMinutes;
+			
+			String[] splitTime = current.getTime().split("\\s-\\s");
+			
+			if(splitTime.length == 2 && splitTime[0].matches("\\d+:\\d\\d\\s(am|pm)") && splitTime[1].matches("\\d+:\\d\\d\\s(am|pm)")){
+				startStr = splitTime[0];
+				endStr = splitTime[1];
+				
+				try{
+					 startHours = Integer.parseInt(startStr.split(":")[0]);
+					 startMinutes = Integer.parseInt((startStr.split(":")[1].replaceAll("[^\\d]", "")));
+					 
+					 // Military 
+					 if(startStr.replaceAll("[^(am|pm)]", "").equals("pm") && startHours < 12){
+						 startHours += 12;
+					 }
+					 
+					 else if (startStr.replaceAll("[^(am|pm)]", "").equals("am") && startHours == 12){
+						 startHours = 0;
+					 }
+					 
+					 endHours = Integer.parseInt(endStr.split(":")[0]);
+					 endMinutes = Integer.parseInt((endStr.split(":")[1].replaceAll("[^\\d]", "")));
+					
+					 // Military 
+					 if(endStr.replaceAll("[^(am|pm)]", "").equals("pm") && endHours < 12){
+						 endHours += 12;
+					 }
+					 
+					 else if (endStr.replaceAll("[^(am|pm)]", "").equals("am") && endHours == 12){
+						 endHours = 0;
+					 }
+					 
+					 TimeBlock newBlock = new TimeBlock(Time.valueOf(startHours + ":" + startMinutes + ":0"), Time.valueOf(endHours + ":" + endMinutes + ":0"));
+					 
+					 if(m){
+						 boolean fits = true;
+						 for (TimeBlock currentBlock : Monday ){
+							 if(currentBlock.conflicts(newBlock)){
+								 
+								 fits = false;
+								 break;
+							 }
+						 }
+						 
+						 if(!fits){ return false; }
+						 else Monday.add(newBlock);
+					 }
+					 
+					 if(t){
+						 boolean fits = true;
+						 for (TimeBlock currentBlock : Tuesday ){
+							 if(currentBlock.conflicts(newBlock)){
+								 
+								 fits = false;
+								 break;
+							 }
+						 }
+						 
+						 if(!fits){ return false; }
+						 else Tuesday.add(newBlock);
+					 }
+					 
+					 if(w){
+						 boolean fits = true;
+						 for (TimeBlock currentBlock : Wednesday ){
+							 if(currentBlock.conflicts(newBlock)){
+								 
+								 fits = false;
+								 break;
+							 }
+						 }
+						 
+						 if(!fits){ return false; }
+						 else Wednesday.add(newBlock);
+					 }
+					 
+					 
+					 if(r){
+						 boolean fits = true;
+						 for (TimeBlock currentBlock : Thursday ){
+							 if(currentBlock.conflicts(newBlock)){
+								 
+								 fits = false;
+								 break;
+							 }
+						 }
+						 
+						 if(!fits){ return false; }
+						 else Thursday.add(newBlock);
+					 }
+					 
+					 
+					 
+					 if(f){
+						 boolean fits = true;
+						 for (TimeBlock currentBlock : Friday ){
+							 if(currentBlock.conflicts(newBlock)){
+								 
+								 fits = false;
+								 break;
+							 }
+						 }
+						 
+						 if(!fits){ return false; }
+						 else Friday.add(newBlock);
+					 }
+					 
+				}
+				
+				catch(Exception e){ return false; }
+				
+			}
+			
+			else{ 
+				return false;
+			}
+			
+			
+		}
+		
+		
+		return true;
+	}
+	
 }
+
 

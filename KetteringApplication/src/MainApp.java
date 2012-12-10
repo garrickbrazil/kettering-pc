@@ -1,6 +1,7 @@
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-
 import org.apache.commons.codec.EncoderException;
 import org.apache.http.client.ClientProtocolException;
 
@@ -11,12 +12,14 @@ import org.apache.http.client.ClientProtocolException;
 public class MainApp {
 	
 	public static void main(String[] args) throws EncoderException, ClientProtocolException, IOException {
+
+		
 		
 		// Objects
 		Scanner input = new Scanner(System.in);
 		Student user = new Student();
 		Directory dir = new Directory();
-		
+				
 		
 		System.out.println("\n========== Directory ==========\n");
 
@@ -45,11 +48,8 @@ public class MainApp {
 		System.out.print("Password: ");
 		user.setPassword(input.nextLine());
 		
-		
-		// Login
 		user.loginBanner();
 		user.loginBlackboard();
-		
 		
 		
 		System.out.println("\n\n========== Storing ==========\n");
@@ -62,6 +62,7 @@ public class MainApp {
 		user.storeAccount();
 		user.storeDynamicCourses(201301);
 
+		
 		
 		System.out.println("\n\n========== Menu ==========\n");
 		System.out.println(menu.toString());
@@ -83,8 +84,28 @@ public class MainApp {
 		System.out.println("\n\n========== Account Total ==========\n");
 		System.out.println(user.getAccountTotal().toString());
 		
-		input.close();
 		
+		System.out.println("\n\n========== Course Scheduler Demo for Math 102, Mech 100, and CS 101 ==========\n");
+		
+		// Demo courses
+		List<String> givenIDs = new ArrayList<String>();
+		givenIDs.add("MECH 100");
+		givenIDs.add("MATH 102");
+		givenIDs.add("CS 101");
+		
+		// Execute
+		List<List<Course>> results = user.getClassOptions(givenIDs);
+		
+		
+		// Print results
+		System.out.println(results.size() + " " + ((results.size()==1)?"option.":"options."));
+		for(List<Course> i : results){
+			for(int j = 0; j < i.size(); j++) System.out.print(i.get(j).getCourseID() + "-" + i.get(j).getSection() + " ");
+			System.out.println();
+		}
+		
+		
+		input.close();
 		
 	}
 
