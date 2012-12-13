@@ -40,31 +40,17 @@ public class MidtermGrade {
 	/*******************************************************************/
 	public MidtermGrade(Elements details){
 		
-		if(details.size() >= 8){
-			
-			// Set properties
-			this.crn = Integer.parseInt(details.get(0).text());
+			// Properties
 			this.subject = details.get(1).text();
-			this.courseID = Integer.parseInt(details.get(2).text());
-			this.section = Integer.parseInt(details.get(3).text());
 			this.title = details.get(4).text();
 			this.campus = details.get(5).text();
 			this.grade = details.get(6).text();
-			this.attemptedCredits = Double.parseDouble(details.get(7).text());
-		}
-		
-		else{
-
-			// Defaults
-			this.crn = 0;
-			this.subject = "";
-			this.courseID = 0;
-			this.section = 0;
-			this.title = "";
-			this.campus = "";
-			this.grade = "";
-			this.attemptedCredits = 0;
-		}
+			
+			// Number properties
+			try{ this.crn = Integer.parseInt(details.get(0).text()); } catch(Exception e){ this.crn = 0; }
+			try{ this.courseID = Integer.parseInt(details.get(2).text()); } catch(Exception e){ this.courseID = 0; }
+			try{ this.section = Integer.parseInt(details.get(3).text()); } catch(Exception e){ this.section = 0; }
+			try{ this.attemptedCredits = Double.parseDouble(details.get(7).text()); } catch(Exception e){ this.attemptedCredits = 0; }
 		
 	}
 	

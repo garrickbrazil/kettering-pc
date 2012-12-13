@@ -84,7 +84,8 @@ public class Student {
 	
 	/********************************************************************
 	 * Accessors: getUsername, getPassword, getCourses, getCurrentGrades
-	 * 		getTranscript
+	 * 		getTranscript, getFinalGrades, getMidtermGrades, getUndergradSummary
+	 *		getAccountTotal, GetDynamicCourses
 	 * Purpose: get the corresponding data
 	/*******************************************************************/
 	public String getUsername() { return this.username; }
@@ -291,28 +292,31 @@ public class Student {
 			
 			// Class grades
 			Elements classGrades = Jsoup.parse(html).getElementsByTag("td");
-			classGrades.remove(classGrades.size() -1);
+			if(classGrades.size() > 0) classGrades.remove(classGrades.size() -1);
 			
 			// Store grades
 			for (int i = 0; i < classGrades.size()/2; i++) {
 				
-				// Details
-				HttpGet gradeDetail = new HttpGet("https://blackboard.kettering.edu" + classGrades.get(i*2+1).childNode(0).childNode(0).attr("href"));
-				HttpResponse gradeResponse = this.clientBlackboard.execute(gradeDetail);
-				
-				// Parameters
-				String className = classGrades.get(i*2).text();
-				String gradeHTML = HTMLParser.parse(gradeResponse);
-				
-				// Write to file
-				printer = new PrintWriter("artifacts/Grade Details/gradeDetail" + i + ".html");
-				printer.print(gradeHTML);	    	
-				printer.close();
-				
-				System.out.println("Successfully stored \"gradeDetail" + i + ".html\"");
-				
-				// Create
-				this.currentGrades.add(new CurrentGrade(className, gradeHTML));
+				if(classGrades.get(i*2 +1).childNodes().size() > 0 && classGrades.get(i*2 +1).childNode(0).childNodes().size() > 0){
+					// Details
+					HttpGet gradeDetail = new HttpGet("https://blackboard.kettering.edu" + classGrades.get(i*2+1).childNode(0).childNode(0).attr("href"));
+					HttpResponse gradeResponse = this.clientBlackboard.execute(gradeDetail);
+					
+					// Parameters
+					String className = classGrades.get(i*2).text();
+					String gradeHTML = HTMLParser.parse(gradeResponse);
+					
+					// Write to file
+					printer = new PrintWriter("artifacts/Grade Details/gradeDetail" + i + ".html");
+					printer.print(gradeHTML);	    	
+					printer.close();
+					
+					System.out.println("Successfully stored \"gradeDetail" + i + ".html\"");
+					
+					// Create
+					CurrentGrade current = new CurrentGrade(className, gradeHTML);
+					if (current.getValidCourseGrade()) this.currentGrades.add(current);
+				}
 			}
 			
 		}
@@ -346,10 +350,10 @@ public class Student {
 			Elements tables = Jsoup.parse(html).getElementsByClass("datadisplaytable");
 			
 			// Correct amount ?
-			if (tables.size() >= 3 && tables.get(2).getElementsByTag("tbody").size() > 0 && tables.get(1).getElementsByTag("tbody").size() > 0){
+			if (tables.size() == 3 && tables.get(2).getElementsByTag("tbody").size() > 0 && tables.get(2).getElementsByTag("tbody").get(0).children().size() == 5 && tables.get(1).getElementsByTag("tbody").size() > 0){
 				
-				// Store undergrad sum
-				this.undergradSummary = new UndergradSummary(tables.get(2).getElementsByTag("tbody").get(0).getElementsByTag("tr"));
+				// Store undergrad summary
+				this.undergradSummary = new UndergradSummary(tables.get(2).getElementsByTag("tbody").get(0).children());
 				
 				Elements courses = tables.get(1).getElementsByTag("tbody").get(0).getElementsByTag("tr");
 				
@@ -357,7 +361,7 @@ public class Student {
 				if (courses.size() > 0) courses.remove(0);
 				
 				// Add final grades
-				for(int i = 0; i < courses.size();  i++){ this.finalGrades.add(new FinalGrade(courses.get(i).getElementsByTag("td"))); }
+				for(int i = 0; i < courses.size();  i++) if(courses.get(i).getElementsByTag("td").size() == 12) this.finalGrades.add(new FinalGrade(courses.get(i).getElementsByTag("td")));
 				
 			}
 			
@@ -399,9 +403,8 @@ public class Student {
 				// Titles remove
 				if(courses.size() > 0) courses.remove(0);
 				
-				
 				// Store midterm grades 
-				for(int i = 0; i < courses.size();  i++) this.midtermGrades.add(new MidtermGrade(courses.get(i).getElementsByTag("td")));
+				for(int i = 0; i < courses.size();  i++) if(courses.get(i).getElementsByTag("td").size() >= 8) this.midtermGrades.add(new MidtermGrade(courses.get(i).getElementsByTag("td")));
 				
 			}
 			
@@ -436,7 +439,7 @@ public class Student {
 			Elements elements = Jsoup.parse(html).getElementsByClass("datadisplaytable");
 		
 			// Set account info
-			if(elements.size() > 0 && elements.get(0).getElementsByTag("tbody").size() > 0){ this.accountTotal = new AccountTotal(elements.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr")); }
+			if(elements.size() > 0 && elements.get(0).getElementsByTag("tbody").size() > 0 && elements.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr").size() > 6) this.accountTotal = new AccountTotal(elements.get(0).getElementsByTag("tbody").get(0).getElementsByTag("tr"));
 			
 		}
 		

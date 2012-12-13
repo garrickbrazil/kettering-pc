@@ -45,11 +45,22 @@ public class UndergradSummary {
 			// Correct size ?
 			if (currentTerm.size() == 5 && cumulative.size() == 5 && transfer.size() == 5 && overall.size() == 5){
 				
-				// Set properties
-				this.currentTerm = new UndergradSummaryDetail(Double.parseDouble(currentTerm.get(0).text()), Double.parseDouble(currentTerm.get(1).text()), Double.parseDouble(currentTerm.get(2).text()), Double.parseDouble(currentTerm.get(3).text()), Double.parseDouble(currentTerm.get(4).text()));
-				this.cumulative = new UndergradSummaryDetail(Double.parseDouble(cumulative.get(0).text()), Double.parseDouble(cumulative.get(1).text()), Double.parseDouble(cumulative.get(2).text()), Double.parseDouble(cumulative.get(3).text()), Double.parseDouble(cumulative.get(4).text()));
-				this.transfer = new UndergradSummaryDetail(Double.parseDouble(transfer.get(0).text()), Double.parseDouble(transfer.get(1).text()), Double.parseDouble(transfer.get(2).text()), Double.parseDouble(transfer.get(3).text()), Double.parseDouble(transfer.get(4).text()));
-				this.overall = new UndergradSummaryDetail(Double.parseDouble(overall.get(0).text()), Double.parseDouble(overall.get(1).text()), Double.parseDouble(overall.get(2).text()), Double.parseDouble(overall.get(3).text()), Double.parseDouble(overall.get(4).text()));
+				// Current Term
+				try { this.currentTerm = new UndergradSummaryDetail(Double.parseDouble(currentTerm.get(0).text()), Double.parseDouble(currentTerm.get(1).text()), Double.parseDouble(currentTerm.get(2).text()), Double.parseDouble(currentTerm.get(3).text()), Double.parseDouble(currentTerm.get(4).text())); }
+				catch(Exception e){ this.currentTerm = new UndergradSummaryDetail(0,0,0,0,0); }
+			
+				// Cumulative
+				try { this.cumulative = new UndergradSummaryDetail(Double.parseDouble(cumulative.get(0).text()), Double.parseDouble(cumulative.get(1).text()), Double.parseDouble(cumulative.get(2).text()), Double.parseDouble(cumulative.get(3).text()), Double.parseDouble(cumulative.get(4).text())); }
+				catch(Exception e) { this.cumulative = new UndergradSummaryDetail(0,0,0,0,0); }
+				
+				// Transfer
+				try { this.transfer = new UndergradSummaryDetail(Double.parseDouble(transfer.get(0).text()), Double.parseDouble(transfer.get(1).text()), Double.parseDouble(transfer.get(2).text()), Double.parseDouble(transfer.get(3).text()), Double.parseDouble(transfer.get(4).text())); }
+				catch(Exception e) { this.transfer = new UndergradSummaryDetail(0,0,0,0,0); }
+				
+				// Overall
+				try { this.overall = new UndergradSummaryDetail(Double.parseDouble(overall.get(0).text()), Double.parseDouble(overall.get(1).text()), Double.parseDouble(overall.get(2).text()), Double.parseDouble(overall.get(3).text()), Double.parseDouble(overall.get(4).text())); }
+				catch(Exception e){ this.overall = new UndergradSummaryDetail(0,0,0,0,0); }
+			
 			}
 			
 		}
@@ -74,7 +85,7 @@ public class UndergradSummary {
 	/*******************************************************************/
 	public String toString(){
 		
-		return "Current term: " + this.currentTerm.toString() + "\nCumulative: " + this.cumulative.toString() + "\nTransfer: " + this.transfer.toString() + "\nOverall: " + this.overall.toString();
+		return "Current term: " + this.currentTerm + "\nCumulative: " + this.cumulative + "\nTransfer: " + this.transfer + "\nOverall: " + this.overall;
 	}
 	
 }

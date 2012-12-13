@@ -54,14 +54,26 @@ public class Course {
 		Elements courseInfo = course.getElementsByTag("td");
 		Elements timeInfo = times.getElementsByTag("td");
 		
-		if(courseInfo.size() > 0 && timeInfo.size() > 0 && course.getElementsByClass("captiontext").size() > 0 && course.getElementsByClass("captiontext").get(0).text().split("\\s[-]\\s").length >= 3){
+		if(courseInfo.size() > 0 && timeInfo.size() > 0 && course.getElementsByClass("captiontext").size() > 0 && (course.getElementsByClass("captiontext").get(0).text().split("\\s[-]\\s").length == 3 || course.getElementsByClass("captiontext").get(0).text().split("\\s[-]\\s").length == 4)){
 			
 			String[] courseTitle = course.getElementsByClass("captiontext").get(0).text().split("\\s[-]\\s");
-				
-			// Title info
-			this.courseName = courseTitle[0];
-			this.courseID = courseTitle[1];
-			this.section = courseTitle[2];
+			
+			if(courseTitle.length == 3){
+			
+				// Title info
+				this.courseName = courseTitle[0];
+				this.courseID = courseTitle[1];
+				this.section = courseTitle[2];
+			}	
+			
+			else{
+			
+				// First hyphen is part of name
+				this.courseName = courseTitle[0] + "-" + courseTitle[1];
+				this.courseID = courseTitle[2];
+				this.section = courseTitle[3];
+			}
+			
 			
 			// Course info
 			this.crn = Integer.parseInt(courseInfo.get(1).text());

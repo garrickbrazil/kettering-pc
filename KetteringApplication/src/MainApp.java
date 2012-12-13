@@ -20,7 +20,7 @@ public class MainApp {
 		Student user = new Student();
 		Directory dir = new Directory();
 		DynamicCourses dyno = new DynamicCourses();
-		
+		Library lib = new Library();
 		
 		System.out.println("\n========== Directory ==========\n");
 
@@ -39,6 +39,20 @@ public class MainApp {
 		// Print search results
 		if(type.equals("1")) System.out.println(dir.getStudentQuery().toString());
 		else System.out.println(dir.getFacultyQuery().toString());
+		
+		
+		System.out.println("\n========== Library ==========\n");
+
+		// Directory info
+		System.out.print("Search query: ");
+		search = input.nextLine();
+		
+		// Search
+		lib.search(search);
+		
+		
+		// Print search results
+		for(LibraryItem item : lib.getLibrary()) System.out.println("\n" + item.toString());
 		
 		
 		System.out.println("\n========== Login ==========\n");
@@ -69,12 +83,12 @@ public class MainApp {
 		
 		
 		System.out.println("\n\n========== Current Grades ==========\n");
-		for(int i = 0; i < user.getCurrentGrades().size(); i++) if(user.getCurrentGrades().get(i).getValidCourseGrade()) System.out.println("\n" + user.getCurrentGrades().get(i).toString());
+		for(int i = 0; i < user.getCurrentGrades().size(); i++) System.out.println("\n" + user.getCurrentGrades().get(i).toString());
 		
 		
 		System.out.println("\n\n========== Final Grades ==========\n");
 		for(int i = 0; i < user.getFinalGrades().size(); i++) System.out.println(user.getFinalGrades().get(i).toString());
-		System.out.println("\n" + user.getUndergradSummary().toString());
+		if(user.getUndergradSummary() != null) System.out.println("\n" + user.getUndergradSummary().toString());
 		
 		
 		System.out.println("\n\n========== Midterm Grades ==========\n");
@@ -82,7 +96,7 @@ public class MainApp {
 		
 		
 		System.out.println("\n\n========== Account Total ==========\n");
-		System.out.println(user.getAccountTotal().toString());
+		if(user.getAccountTotal() != null) System.out.println(user.getAccountTotal().toString());
 		
 		
 		System.out.println("\n\n========== Course Scheduler Valid Choices==========\n");

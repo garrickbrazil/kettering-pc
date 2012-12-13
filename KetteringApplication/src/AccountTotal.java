@@ -25,32 +25,28 @@ public class AccountTotal {
 		
 		this.details = new ArrayList<AccountDetail>();
 		
-		if(rows.size() > 6){
-			
-			// Account balance
-			rows.remove(0); rows.remove(0);
-			
-			
-			// Charges
-			if(rows.get(rows.size()-3).getElementsByTag("td").size() > 0) this.charges = rows.get(rows.size()-3).getElementsByTag("td").get(0).text();
-			
-			
-			// Credits
-			if(rows.get(rows.size()-2).getElementsByTag("td").size() > 0) this.credits = rows.get(rows.size()-2).getElementsByTag("td").get(0).text();
-			
-			
-			// Account Balance
-			if(rows.get(rows.size()-1).getElementsByTag("td").size() > 0) this.balance = rows.get(rows.size()-1).getElementsByTag("td").get(0).text();
-			
-			
-			// Remove last three rows
-			rows.remove(rows.size()-1); rows.remove(rows.size()-1); rows.remove(rows.size()-1);
-			
-			
-			// Add details
-			for(int i = 0; i < rows.size(); i++) details.add(new AccountDetail(rows.get(i)));
-		}
+		// Account balance
+		rows.remove(0); rows.remove(0);
 		
+		
+		// Charges
+		if(rows.get(rows.size()-3).getElementsByTag("td").size() > 0) this.charges = rows.get(rows.size()-3).getElementsByTag("td").get(0).text();
+		else this.charges = "";
+		
+		// Credits
+		if(rows.get(rows.size()-2).getElementsByTag("td").size() > 0) this.credits = rows.get(rows.size()-2).getElementsByTag("td").get(0).text();
+		else this.credits = "";
+		
+		// Account Balance
+		if(rows.get(rows.size()-1).getElementsByTag("td").size() > 0) this.balance = rows.get(rows.size()-1).getElementsByTag("td").get(0).text();
+		else this.balance = "";
+		
+		// Remove last three rows
+		rows.remove(rows.size()-1); rows.remove(rows.size()-1); rows.remove(rows.size()-1);
+		
+		
+		// Add details
+		for(int i = 0; i < rows.size(); i++) if(rows.get(i).getElementsByTag("td").size() == 5) details.add(new AccountDetail(rows.get(i)));
 	}
 	
 	
@@ -107,26 +103,14 @@ class AccountDetail{
 	public AccountDetail(Element row){
 		
 		Elements properties = row.getElementsByTag("td");
-		
-		if(properties.size() == 5){
 			
-			// Set properties
-			this.detailCode = properties.get(0).text().replaceAll("[\\u00A0\\s]","");
-			this.description = properties.get(1).text().replaceAll("[\\u00A0\\s]","");
-			this.charge = properties.get(2).text().replaceAll("[\\u00A0\\s]","");
-			this.payment = properties.get(3).text().replaceAll("[\\u00A0\\s]","");
-			this.balance = properties.get(4).text().replaceAll("[\\u00A0\\s]","");
-		}
-		
-		else{
-			
-			// Defaults
-			this.detailCode = "";
-			this.description = "";
-			this.charge = "";
-			this.payment = "";
-			this.balance = "";
-		}
+		// Set properties
+		this.detailCode = properties.get(0).text().replaceAll("[\\u00A0\\s]","");
+		this.description = properties.get(1).text().replaceAll("[\\u00A0\\s]","");
+		this.charge = properties.get(2).text().replaceAll("[\\u00A0\\s]","");
+		this.payment = properties.get(3).text().replaceAll("[\\u00A0\\s]","");
+		this.balance = properties.get(4).text().replaceAll("[\\u00A0\\s]","");
+	
 	}
 	
 	

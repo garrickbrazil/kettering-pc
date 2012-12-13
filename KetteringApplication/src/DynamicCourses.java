@@ -38,7 +38,7 @@ public class DynamicCourses {
 	
 	
 	/********************************************************************
-	 * Accessors: getDynamicCourses, getResults
+	 * Accessors: getDynamicCourses, getResults getDynamicCourseIDs
 	 * Purpose: get the corresponding data
 	/*******************************************************************/
 	public Map<String, List<Course>> getDynamicCourses(){ return this.dynamicCourses; }
@@ -105,41 +105,32 @@ public class DynamicCourses {
 						double credits; int crn;
 						
 
-						if (courseTitle.length >= 4 && coursesOffered.get(j*2+1).getElementsByTag("td").size() >= 8 && coursesOffered.get(j*2+1).getElementsByTag("td").get(0).text().split("\\d.\\d\\d\\d\\sCredits").length >= 2){
-							
-							// Title info
-							courseName = courseTitle[0];
-							courseID = courseTitle[2];
-							section = courseTitle[3];
+						if ((courseTitle.length == 4 || courseTitle.length == 5) && coursesOffered.get(j*2+1).getElementsByTag("td").size() >= 8 && coursesOffered.get(j*2+1).getElementsByTag("td").get(0).text().split("\\d.\\d\\d\\d\\sCredits").length >= 2){
 							
 							
-							// CRN
-							try{ crn = Integer.parseInt(courseTitle[1]); }
-							catch(Exception e){
+							if(courseTitle.length == 4){
+
+								// Title info
+								courseName = courseTitle[0];
+								courseID = courseTitle[2];
+								section = courseTitle[3];
 								
+								// CRN
+								try{ crn = Integer.parseInt(courseTitle[1]); } catch(Exception e){ crn = 0; }
+							}
+							
+
+							else{
+
 								// First hyphen is part of title ?
-								if(courseTitle.length > 4){
-									try { 
-										crn = Integer.parseInt(courseTitle[2]);
-										courseName = courseTitle[0] + " - " + courseTitle[1];
-										courseID = courseTitle[3];
-										section = courseTitle[4];
-									} 
-									catch(Exception ex){
-										crn = 0;
-										courseName = "";
-										courseID = "";
-										section = "";
-									}
-								}
+								courseName = courseTitle[0] + " - " + courseTitle[1];
+								courseID = courseTitle[3];
+								section = courseTitle[4];
 								
-								else crn = 0;
+								// CRN
+								try{ crn = Integer.parseInt(courseTitle[2]); } catch(Exception e){ crn = 0; }
 							}
-							
-							if(courseID.equals("COMM 301") && section.equals("05")){
 								
-								System.out.print("");
-							}
 							
 							// Special cases
 							if(section.contains("L")) courseID += "L";
@@ -155,9 +146,9 @@ public class DynamicCourses {
 								try{ credits = Double.parseDouble(m.group(1)); }
 								catch(Exception e){ credits = 0; }
 							}
+							
+							
 							Elements timeInfo = coursesOffered.get(j*2 + 1).getElementsByTag("td");
-							
-							
 							// Remove headers
 							timeInfo.remove(0); timeInfo.remove(0);
 							
@@ -243,6 +234,7 @@ public class DynamicCourses {
 	/*******************************************************************/
 	public void setClassOptions(List<String> givenIDs){
 		
+		
 		List<List<Course>> choices = new ArrayList<List<Course>>();
 		List<List<Course>> results = new ArrayList<List<Course>>();
 		
@@ -259,7 +251,7 @@ public class DynamicCourses {
 			}
 		}
 		
-		// Check permutations
+		// Permutations
 		this.checkPermutations("{\"jsonCourses\": [", choices, 0, results);
 		this.workingSchedules = results;
 	}
@@ -282,31 +274,31 @@ public class DynamicCourses {
 		for(Course current : courses){
 			
 			// Which days ?
-			boolean m = current.getDays().contains("M");
-			boolean t = current.getDays().contains("T");
-			boolean w = current.getDays().contains("W");
-			boolean r = current.getDays().contains("R");
-			boolean f = current.getDays().contains("F");
+			boolean M = current.getDays().contains("M");
+			boolean T = current.getDays().contains("T");
+			boolean W = current.getDays().contains("W");
+			boolean R = current.getDays().contains("R");
+			boolean F = current.getDays().contains("F");
 				
 			// Convert to TimeBlock
 			TimeBlock newBlock = TimeBlock.convertToTimeBlock(current.getTime());
 			if(newBlock == null ) return false;
 			 
-			 if(m){
+			 if(M){
 				 
 				 // Monday
 				 if(TimeBlock.testDay(Monday, newBlock)) Monday.add(newBlock);
 				 else return false;
 			 }
 			 
-			 if(t){
+			 if(T){
 
 				 // Tuesday
 				 if(TimeBlock.testDay(Tuesday, newBlock)) Tuesday.add(newBlock);
 				 else return false;
 			 }
 			 
-			 if(w){
+			 if(W){
 				 
 				 // Wednesday
 				 if(TimeBlock.testDay(Wednesday, newBlock)) Wednesday.add(newBlock);
@@ -314,7 +306,7 @@ public class DynamicCourses {
 			 }
 			 
 			 
-			 if(r){
+			 if(R){
 				 
 				 // Thursday
 				 if(TimeBlock.testDay(Thursday, newBlock)) Thursday.add(newBlock);
@@ -322,7 +314,7 @@ public class DynamicCourses {
 			 }
 			 
 			 
-			 if(f){
+			 if(F){
 				 
 				 // Friday
 				 if(TimeBlock.testDay(Friday, newBlock)) Friday.add(newBlock);

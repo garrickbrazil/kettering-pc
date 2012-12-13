@@ -29,7 +29,9 @@ public class TimeBlock {
 	/*******************************************************************/
 	public static boolean testDay(List<TimeBlock> day, TimeBlock block){
 		
+		 // Test conflicts
 		 for (TimeBlock currentBlock : day ) if(currentBlock.conflicts(block)) return false;
+		 
 		 return true;
 		 
 	}
@@ -41,7 +43,7 @@ public class TimeBlock {
 	/*******************************************************************/
 	public static TimeBlock convertToTimeBlock(String time){
 		
-		// Initial
+		// Properties
 		int startHours, startMinutes, endHours, endMinutes;
 		String[] splitTime = time.split("\\s-\\s");
 		
@@ -87,11 +89,10 @@ public class TimeBlock {
 	public boolean conflicts(TimeBlock block){
 		
 		// Problems ?
-		if(this.start.compareTo(block.getStart()) <= 0 && this.end.compareTo(block.getStart()) >= 0) return true;
-		else if(this.start.compareTo(block.getEnd()) <= 0 && this.end.compareTo(block.getEnd()) >= 0) return true;
+		if(block == null || (this.start.compareTo(block.getStart()) <= 0 && this.end.compareTo(block.getStart()) >= 0)) return true;
+		else if(block == null || (this.start.compareTo(block.getEnd()) <= 0 && this.end.compareTo(block.getEnd()) >= 0)) return true;
 		
 		else return false;
-		
 	}
 	
 	/********************************************************************

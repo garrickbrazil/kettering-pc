@@ -45,39 +45,24 @@ public class FinalGrade {
 	 * Purpose: create a final grade object with parameters
 	/*******************************************************************/
 	public FinalGrade(Elements details){
+	
 		
-		if(details.size() == 12){
+		// Properties
+		this.subject = details.get(1).text();
+		this.title = details.get(4).text();
+		this.campus = details.get(5).text();
+		this.grade = details.get(6).text();
+		
+		
+		// Number properties
+		try{ this.crn = Integer.parseInt(details.get(0).text()); } catch(Exception e){ this.crn = 0; }
+		try{ this.courseID = Integer.parseInt(details.get(2).text()); } catch(Exception e){ this.courseID = 0; }
+		try{ this.section = Integer.parseInt(details.get(3).text()); } catch(Exception e){ this.section = 0; }
+		try{ this.attemptedCredits = Double.parseDouble(details.get(7).text()); } catch(Exception e){ this.attemptedCredits = 0; }
+		try{ this.earnedCredits = Double.parseDouble(details.get(8).text()); } catch(Exception e){ this.earnedCredits = 0; }
+		try{ this.GPAHours = Double.parseDouble(details.get(9).text()); } catch(Exception e){ this.GPAHours = 0; }
+		try{ this.qualityPoints = Double.parseDouble(details.get(10).text()); } catch(Exception e){ this.qualityPoints = 0; }
 			
-			// Properties
-			this.crn = Integer.parseInt(details.get(0).text());
-			this.subject = details.get(1).text();
-			this.courseID = Integer.parseInt(details.get(2).text());
-			this.section = Integer.parseInt(details.get(3).text());
-			this.title = details.get(4).text();
-			this.campus = details.get(5).text();
-			this.grade = details.get(6).text();
-			this.attemptedCredits = Double.parseDouble(details.get(7).text());
-			this.earnedCredits = Double.parseDouble(details.get(8).text());
-			this.GPAHours = Double.parseDouble(details.get(9).text());
-			this.qualityPoints = Double.parseDouble(details.get(10).text());
-		}
-		
-		else{
-
-			// Defaults
-			this.crn = 0;
-			this.subject = "";
-			this.courseID = 0;
-			this.section = 0;
-			this.title = "";
-			this.campus = "";
-			this.grade = "";
-			this.attemptedCredits = 0;
-			this.earnedCredits = 0;
-			this.GPAHours = 0;
-			this.qualityPoints = 0;
-		}
-		
 	}
 	
 	
