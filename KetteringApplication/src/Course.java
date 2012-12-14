@@ -143,8 +143,6 @@ public class Course {
 	/********************************************************************
 	 * Method: toString()
 	 * Purpose: converts the data into a formatted string
-	 * Returns:
-	 * 		String courseInfo: contains all class information
 	/*******************************************************************/
 	public String toString(){
 		

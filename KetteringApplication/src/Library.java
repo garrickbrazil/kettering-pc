@@ -60,7 +60,7 @@ public class Library {
 			
 			
 			// Add First Page Items
-			for(Element item : hitlist) this.libraryItems.add(new LibraryItem(item));
+			for(Element item : hitlist) if(item.getElementsByClass("title").size() > 0 && item.getElementsByClass("publisher").size() > 0 && item.getElementsByClass("author").size() > 0 && item.getElementsByClass("call_number").size() > 0 && item.getElementsByClass("edition").size() > 0 && item.getElementsByClass("holdings_statement").size() > 0 && item.getElementsByClass("publishing_date_label").size() > 0) this.libraryItems.add(new LibraryItem(item));
 			
 			
 			Elements pagination = doc.getElementsByClass("searchsummary_pagination");

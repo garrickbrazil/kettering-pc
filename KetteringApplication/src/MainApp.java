@@ -21,6 +21,10 @@ public class MainApp {
 		Directory dir = new Directory();
 		DynamicCourses dyno = new DynamicCourses();
 		Library lib = new Library();
+		News news = new News();
+		
+		for(NewsItem item : news.getNews()) System.out.println(item.getHeadline());
+		System.out.println(news.getNews().size());
 		
 		System.out.println("\n========== Directory ==========\n");
 
@@ -43,7 +47,7 @@ public class MainApp {
 		
 		System.out.println("\n========== Library ==========\n");
 
-		// Directory info
+		// Library info
 		System.out.print("Search query: ");
 		search = input.nextLine();
 		
@@ -53,6 +57,7 @@ public class MainApp {
 		
 		// Print search results
 		for(LibraryItem item : lib.getLibrary()) System.out.println("\n" + item.toString());
+		
 		
 		
 		System.out.println("\n========== Login ==========\n");
