@@ -20,11 +20,10 @@ public class MainApp {
 		Student user = new Student();
 		Directory dir = new Directory();
 		DynamicCourses dyno = new DynamicCourses();
-		Library lib = new Library();
-		News news = new News();
+		Library lib = new Library();		
+		TransferDirectory transDir = new TransferDirectory();
 		
-		for(NewsItem item : news.getNews()) System.out.println(item.getHeadline());
-		System.out.println(news.getNews().size());
+		
 		
 		System.out.println("\n========== Directory ==========\n");
 
@@ -58,7 +57,7 @@ public class MainApp {
 		// Print search results
 		for(LibraryItem item : lib.getLibrary()) System.out.println("\n" + item.toString());
 		
-		
+		if(lib.getLibrary().size() <= 0) System.out.println("No results.");
 		
 		System.out.println("\n========== Login ==========\n");
 
@@ -74,6 +73,7 @@ public class MainApp {
 		
 		System.out.println("\n\n========== Storing ==========\n");
 		Menu menu = new Menu();
+		News news = new News();
 		user.storeSchedule(201301);
 		user.storeFinalGrades(201201);
 		user.storeMidtermGrades(201201);
@@ -81,6 +81,7 @@ public class MainApp {
 		user.storeTranscript();
 		user.storeAccount();
 		dyno.storeDynamicCourses(201301);
+		transDir.searchByCourse("CS 102");
 
 		
 		System.out.println("\n\n========== Menu ==========\n");
@@ -102,6 +103,14 @@ public class MainApp {
 		
 		System.out.println("\n\n========== Account Total ==========\n");
 		if(user.getAccountTotal() != null) System.out.println(user.getAccountTotal().toString());
+		
+		
+		System.out.println("\n\n========== Course Transfer Example for CS 102 ==========\n");
+		for(TransferCourse current : transDir.getResults()) System.out.println(current.toString());
+		
+		
+		System.out.println("\n\n========== Current News ==========\n");
+		for (NewsItem current : news.getNews() ) System.out.println(current.toString());
 		
 		
 		System.out.println("\n\n========== Course Scheduler Valid Choices==========\n");

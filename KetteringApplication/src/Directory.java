@@ -46,12 +46,13 @@ public class Directory {
 		this.type = type;
 		this.search = search;
 		
+		this.search = search.replaceAll("\\s", "+");
 		
 		try{
 			
 			// Connect
 			this.client = new DefaultHttpClient();
-			HttpGet searchGet = new HttpGet("https://drupal.kettering.edu:8443/kumobile/rest/directory/search/query/" + search + "/type/" + type);
+			HttpGet searchGet = new HttpGet("https://drupal.kettering.edu:8443/kumobile/rest/directory/search/query/" + this.search + "/type/" + type);
 			HttpResponse response = client.execute(searchGet);
 			
 			
@@ -79,14 +80,13 @@ public class Directory {
 		
 		// Properties
 		this.type = type;
-		this.search = search;
-		
+		this.search = search.replaceAll("\\s", "+");
 		
 		try{
 			
 			// Connect
 			this.client = new DefaultHttpClient();
-			HttpGet searchGet = new HttpGet("https://drupal.kettering.edu:8443/kumobile/rest/directory/search/query/" + search + "/type/" + type);
+			HttpGet searchGet = new HttpGet("https://drupal.kettering.edu:8443/kumobile/rest/directory/search/query/" + this.search + "/type/" + type);
 			HttpResponse response = client.execute(searchGet);
 			
 			

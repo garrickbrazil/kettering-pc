@@ -1,9 +1,17 @@
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import com.google.gson.Gson;
 
@@ -25,6 +33,7 @@ public class TransferDirectory {
 	public TransferDirectory(){
 		
 		this.client = new DefaultHttpClient();
+		this.results = new TransferCourses();
 		
 		try{
 			
@@ -51,10 +60,12 @@ public class TransferDirectory {
 	
 	
 	/********************************************************************
-	 * Method: search()
-	 * Purpose: search with given parameter
+	 * Method: searchByCollege()
+	 * Purpose: search by college
 	/*******************************************************************/
-	public void search(String code){
+	public void searchByCollege(String code){
+		
+		this.results = new TransferCourses();
 		
 		try{
 			
@@ -71,6 +82,77 @@ public class TransferDirectory {
 		}
 		catch (Exception e){ this.results = new TransferCourses(); }	
 	}
+	
+	
+	
+	/********************************************************************
+	 * Method: searchByCourse()
+	 * Purpose: search by course
+	/*******************************************************************/
+	public void searchByCourse(String course){
+		
+		this.results = new TransferCourses();
+		
+		
+		try{
+			
+			HttpPost searchCourse = new HttpPost("http://asection.ketteringdeltachi.org/krunal/kutrans/results.php");
+			
+	        // Parameters
+	        List <NameValuePair> parameters = new ArrayList <NameValuePair>();
+	        parameters.add(new BasicNameValuePair("input", course));
+	        searchCourse.setEntity(new UrlEncodedFormEntity(parameters));
+	        
+	        
+	        // Execute
+	        HttpResponse response = this.client.execute(searchCourse);
+	        String html = HTMLParser.parse(response);
+	        
+	        
+			// Write to file
+			PrintWriter printer = new PrintWriter("artifacts/kutrans.html");
+			printer.print(html);	    	
+			printer.close();
+			
+			System.out.println("Successfully stored \"kutrans.html\".");
+			
+			Elements table = Jsoup.parse(html).getElementsByTag("tbody");
+			
+			// Correct format
+			if(table.size() > 0 && table.get(0).getElementsByTag("tr").size() > 0) {
+				
+				Elements rows = table.get(0).getElementsByTag("tr");
+				rows.remove(0);
+				
+				
+				// All Rows
+				for(Element row : rows){
+					
+					if(row.getElementsByTag("td").size() == 6){
+						
+						Elements td = row.getElementsByTag("td");
+						
+						// Properties
+						String transID = td.get(0).text();
+						String college = td.get(1).text();
+						String kuID = td.get(2).text();
+						String kuTitle = td.get(3).text();
+						String credits = td.get(4).text();
+						String comment = td.get(5).text();
+						
+						// Add
+						this.results.getCourses().add(new TransferCourse(college, transID, kuID, kuTitle, credits, comment));
+						
+					}
+				}
+				
+			}
+	        
+		}
+		
+		catch(Exception e){}
+	}
+	
 }
 
 
@@ -110,6 +192,23 @@ class TransferCourse{
 	private String sbgi;
 	private String comment;
 	
+	
+	/********************************************************************
+	 * Constructor: TransferCourse
+	 * Purpose: holds a single transfer course
+	/*******************************************************************/
+	public TransferCourse(String college, String transID, String kuID, String kuTitle, String credits, String comment){
+		
+		// Set properties
+		this.institution = college;
+		this.trnscrse = transID;
+		this.kucourse = kuID;
+		this.kucoursetitle = kuTitle;
+		this.credits = credits;
+		this.comment = comment;
+	}
+	
+	
 	// Accessors
 	public String getInstitution(){ return this.institution; }
 	public String getTitle(){ return this.kucoursetitle; }
@@ -145,6 +244,8 @@ class TransferCourse{
 		
 		String transStr = "";
 		
+		
+		// Add valid properties
 		if(this.getInstitution() != null) transStr += "Institution: " + this.getInstitution() + " ";  
 		if(this.getTitle() != null) transStr += "Title: " + this.getTitle() + " ";
 		if(this.getCredits() != null) transStr += "Credits: " + this.getCredits() + " ";
@@ -168,6 +269,10 @@ class CollegeOptions{
 	private List<CollegeOption> entries;
 	
 	
+	/********************************************************************
+	 * Constructor: CollegeOptions
+	 * Purpose: creates college options
+	/*******************************************************************/
 	public CollegeOptions(){
 		this.entries = new ArrayList<CollegeOption>();
 	}
