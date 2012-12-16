@@ -76,7 +76,7 @@ public class News {
 						String body = doc.getElementsByClass("intro").get(0).nextElementSibling().toString();
 						
 						// Add
-						news.add(new NewsItem(title, headline, date, body));
+						this.news.add(new NewsItem(title, headline, date, body));
 					}
 				}	
 			}
@@ -88,10 +88,72 @@ public class News {
 	
 	
 	/********************************************************************
+	 * Method: getPage
+	 * Purpose: returns page result
+	/*******************************************************************/
+	public List<NewsItem> getPage(int page){
+		
+		
+		String baseURL = "https://www.kettering.edu";
+		List<NewsItem> newsPage = new ArrayList<NewsItem>();
+		
+		if(page < 2) return newsPage;
+		
+		try{
+			
+			DefaultHttpClient client = new DefaultHttpClient();
+			HttpGet newsGet = new HttpGet("https://www.kettering.edu/news/current-news?page=" + --page);
+			
+			HttpResponse response = client.execute(newsGet);
+			String html = HTMLParser.parse(response);
+			
+			// Write to file
+			PrintWriter printer = new PrintWriter("artifacts/news/newsPage" + page + ".html");
+			printer.print(html);	    	
+			printer.close();
+			
+			System.out.println("Successfully stored \"newsPage" + page + ".html\".");
+			
+			Elements articles = Jsoup.parse(html).getElementsByClass("more");
+			
+			for(Element article : articles){
+				if(article.attr("href") != null){
+					
+					// Execute
+					response = client.execute(new HttpGet(baseURL + article.attr("href")));
+					
+					Document doc = Jsoup.parse(HTMLParser.parse(response));
+					
+					// Correct format ?
+					if(doc.getElementsByClass("news").size() > 0 && doc.getElementsByClass("info").size() > 0 && doc.getElementsByClass("intro").size() > 0 && doc.getElementsByClass("intro").get(0).nextElementSibling() != null){
+						
+						// Set properties
+						String title = doc.getElementsByClass("news").get(0).text();
+						String headline = doc.getElementsByClass("intro").get(0).text();
+						String date = doc.getElementsByClass("date").get(0).text();
+						String body = doc.getElementsByClass("intro").get(0).nextElementSibling().toString();
+						
+						// Add
+						newsPage.add(new NewsItem(title, headline, date, body));
+					}
+				}	
+			}
+			
+			return newsPage;
+			
+		}
+		
+		catch(Exception e){ return new ArrayList<NewsItem>(); }
+		
+		
+	}
+	
+	
+	/********************************************************************
 	 * Accessors: getNews
 	 * Purpose: get the corresponding data
 	/*******************************************************************/
-	public List<NewsItem> getNews(){ return news; }
+	public List<NewsItem> getNews(){ return this.news; }
 	
 }
 

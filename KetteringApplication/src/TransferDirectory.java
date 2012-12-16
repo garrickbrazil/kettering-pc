@@ -18,7 +18,7 @@ import com.google.gson.Gson;
 /********************************************************************
  * Class: TransferDirectory
  * Purpose: search transfer courses from various universities
-/*******************************************************************/
+/***********************************************f********************/
 public class TransferDirectory {
 	
 	// Properties

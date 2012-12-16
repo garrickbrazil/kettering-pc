@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 import org.apache.commons.codec.EncoderException;
@@ -22,7 +23,7 @@ public class MainApp {
 		DynamicCourses dyno = new DynamicCourses();
 		Library lib = new Library();		
 		TransferDirectory transDir = new TransferDirectory();
-		
+		Events events = new Events();
 		
 		
 		System.out.println("\n========== Directory ==========\n");
@@ -111,6 +112,27 @@ public class MainApp {
 		
 		System.out.println("\n\n========== Current News ==========\n");
 		for (NewsItem current : news.getNews() ) System.out.println(current.toString());
+		
+		
+		System.out.println("\n\n========== Current News Page 2 ==========\n");
+		List<NewsItem> newsPage2 = news.getPage(2);
+		for (NewsItem current : newsPage2) System.out.println(current.toString());
+		
+		System.out.println("\n\n========== Events Latest 10 ==========\n");
+		
+		Calendar cal = Calendar.getInstance();
+		
+		@SuppressWarnings("deprecation")
+		List<EventsJSON> eventsList = events.getEvents(1, new Date(cal.getTime().getMonth()+1,cal.getTime().getDay(),cal.getTime().getYear()));
+		
+		for (EventsJSON eventsJSON: eventsList){
+			
+			System.out.println(eventsJSON.getDate().toString());
+			
+			for(Event current: eventsJSON.getEvents()){
+				System.out.println("\t" + current.toString());
+			}	
+		}
 		
 		
 		System.out.println("\n\n========== Course Scheduler Valid Choices==========\n");
